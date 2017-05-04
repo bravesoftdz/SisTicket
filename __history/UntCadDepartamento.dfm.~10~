@@ -10,12 +10,13 @@ inherited FrmCadDepartamento: TFrmCadDepartamento
     Width = 480
     Height = 87
     Caption = ' Cadastro de departamentos'
-    Color = clSkyBlue
-    Font.Height = -24
-    ExplicitWidth = 480
+    Color = clMoneyGreen
+    Font.Height = -19
+    ExplicitLeft = -8
+    ExplicitTop = -6
     ExplicitHeight = 87
     object Image1: TImage
-      Left = 16
+      Left = 2
       Top = 11
       Width = 71
       Height = 70
@@ -66,55 +67,28 @@ inherited FrmCadDepartamento: TFrmCadDepartamento
     Height = 48
     Align = alBottom
     ExplicitTop = 158
-    ExplicitWidth = 480
+    ExplicitWidth = 472
     ExplicitHeight = 48
-    inherited ToolButton4: TToolButton
-      Width = 345
-      ExplicitWidth = 345
-    end
     inherited btn_salvar: TToolButton
-      Left = 345
       OnClick = btn_salvarClick
-      ExplicitLeft = 345
-    end
-    inherited btn_cancelar: TToolButton
-      Left = 388
-      ExplicitLeft = 388
-    end
-    inherited btn_sair: TToolButton
-      Left = 431
-      ExplicitLeft = 431
     end
   end
   inherited StatusBar1: TStatusBar
     Top = 206
     Width = 480
-    ExplicitTop = 206
-    ExplicitWidth = 480
+    ExplicitTop = 180
   end
   inherited PnlFicha: TPanel
     Top = 87
     Width = 480
     Height = 71
     ExplicitTop = 87
-    ExplicitWidth = 480
-    ExplicitHeight = 71
-    inherited Label1: TLabel
-      Top = 28
-      Width = 118
-      Caption = 'Nome do Departamento:'
-      ExplicitTop = 28
-      ExplicitWidth = 118
-    end
+    ExplicitHeight = 90
     inherited DBEdit1: TDBEdit
-      Left = 140
-      Top = 25
-      Width = 321
+      Left = 68
       DataField = 'descricao'
       DataSource = FrmDepartamento.DataSource1
-      ExplicitLeft = 140
-      ExplicitTop = 25
-      ExplicitWidth = 321
+      ExplicitLeft = 68
     end
   end
 end

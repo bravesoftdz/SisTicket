@@ -167,7 +167,9 @@ begin
 
     if confExcl = IDNO then
     begin
-      StatusBar1.Panels[2].Text:= 'Exclusão Cancelada';
+      mensagem:= 'A exclusão deste registro foi abortada.';
+      Application.MessageBox(PChar(mensagem), 'Informação',
+        MB_OK+MB_ICONINFORMATION);
     end;
 
     Executar:= habilitaBotoes;

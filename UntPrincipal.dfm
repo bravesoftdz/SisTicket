@@ -66,7 +66,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Height = 19
     Panels = <
       item
-        Width = 75
+        Width = 100
       end
       item
         Width = 300
@@ -75,7 +75,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
         Width = 300
       end
       item
-        Width = 50
+        Width = 100
       end>
   end
   object Panel1: TPanel
@@ -102,7 +102,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Left = 224
     Top = 272
     Bitmap = {
-      494C010105001800F00040004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105001800F40040004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000000100008000000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

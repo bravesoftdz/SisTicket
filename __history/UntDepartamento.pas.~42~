@@ -13,7 +13,9 @@ uses
 
 type
   TFrmDepartamento = class(TFrmPadraoSimples)
-    procedure ToolButton1Click(Sender: TObject);
+    FDTable1id: TFDAutoIncField;
+    FDTable1descricao: TStringField;
+    procedure btn_inserirClick(Sender: TObject);
     procedure btn_editarClick(Sender: TObject);
   private
     { Private declarations }
@@ -46,20 +48,18 @@ begin
   FrmCadDepartamento.ShowModal;
 end;
 
-procedure TFrmDepartamento.ToolButton1Click(Sender: TObject);
+procedure TFrmDepartamento.btn_inserirClick(Sender: TObject);
 begin
   inherited;
-  FDTable1.Close;
-  FDTable1.Open();
-  FDTable1.Last+1;
-
   // Habilita Botoes
+  FDTable1.Insert;
   FrmCadDepartamento.btn_salvar.Enabled:= true;
   FrmCadDepartamento.btn_cancelar.Enabled:= true;
   FrmCadDepartamento.btn_sair.Enabled:= false;
   FrmCadDepartamento.PnlFicha.Enabled:= true;
-
   FrmCadDepartamento.ShowModal;
+  FDTable1.Close;
+  FDTable1.Open();
 end;
 
 end.

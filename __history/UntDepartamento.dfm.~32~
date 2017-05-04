@@ -2,7 +2,6 @@ inherited FrmDepartamento: TFrmDepartamento
   Caption = 'Departamentos'
   ClientHeight = 309
   ClientWidth = 460
-  OnActivate = FormActivate
   ExplicitWidth = 466
   ExplicitHeight = 338
   PixelsPerInch = 96
@@ -14,9 +13,9 @@ inherited FrmDepartamento: TFrmDepartamento
     Font.Height = -21
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitWidth = 460
   end
   inherited DBGrid1: TDBGrid
-    Top = 141
     Width = 460
     Height = 168
     Columns = <
@@ -37,23 +36,24 @@ inherited FrmDepartamento: TFrmDepartamento
   end
   inherited ToolBar1: TToolBar
     Width = 460
+    ExplicitWidth = 460
+    inherited btn_inserir: TToolButton
+      OnClick = btn_inserirClick
+    end
+    inherited btn_editar: TToolButton
+      OnClick = btn_editarClick
+    end
   end
   inherited Panel2: TPanel
     Width = 460
+    ExplicitWidth = 460
   end
   inherited DataSource1: TDataSource
-    DataSet = FDQuery1
     Left = 320
-  end
-  inherited FDQuery1: TFDQuery
-    Connection = DM.FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM ticket.dbo.departamento')
-    Top = 248
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C010107001800180018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -655,10 +655,8 @@ inherited FrmDepartamento: TFrmDepartamento
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 96
-    Top = 232
     Bitmap = {
-      494C010107001800180018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1261,7 +1259,7 @@ inherited FrmDepartamento: TFrmDepartamento
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C010107001800180018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1861,5 +1859,22 @@ inherited FrmDepartamento: TFrmDepartamento
       0000038003FF800003800003E000038003FFC00007800003E000030003FFF000
       1FC00007E1FFFF9CFFFFFE00FFFFFFFF00000000000000000000000000000000
       000000000000}
+  end
+  inherited FDTable1: TFDTable
+    IndexFieldNames = 'id'
+    UpdateOptions.UpdateTableName = 'departamento'
+    TableName = 'departamento'
+    object FDTable1id: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDTable1descricao: TStringField
+      FieldName = 'descricao'
+      Origin = 'descricao'
+      Required = True
+      Size = 250
+    end
   end
 end

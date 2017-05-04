@@ -107,7 +107,7 @@ begin
     conexao := true
    end
     else
-      StatusBar1.Panels[2].Text:= 'Não Conectado, verifique sua conexão!';
+      StatusBar1.Panels[3].Text:= 'Não Conectado, verifique sua conexão!';
 end;
 
 

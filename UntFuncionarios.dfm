@@ -1,27 +1,30 @@
 inherited FrmFuncionarios: TFrmFuncionarios
   Caption = 'Funcionarios'
-  ClientHeight = 460
+  ClientHeight = 577
   ClientWidth = 733
   Font.Color = clBlack
   OnActivate = FormActivate
   ExplicitWidth = 739
-  ExplicitHeight = 489
+  ExplicitHeight = 606
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar1: TToolBar
     Top = 44
     Width = 733
     ExplicitTop = 44
+    ExplicitWidth = 733
   end
   inherited StatusBar1: TStatusBar
-    Top = 441
+    Top = 558
     Width = 733
-    ExplicitTop = 420
+    ExplicitTop = 441
+    ExplicitWidth = 733
   end
   inherited PanelEntrada: TPanel
     Top = 93
     Width = 733
     ExplicitTop = 93
+    ExplicitWidth = 733
     inherited CheckHabilita: TDBCheckBox
       DataField = 'status'
     end
@@ -29,9 +32,10 @@ inherited FrmFuncionarios: TFrmFuncionarios
   inherited PnlFicha: TPanel
     Top = 123
     Width = 733
-    Height = 318
+    Height = 435
     ExplicitTop = 123
-    ExplicitHeight = 297
+    ExplicitWidth = 733
+    ExplicitHeight = 318
     object Label4: TLabel
       Left = 24
       Top = 16
@@ -224,13 +228,12 @@ inherited FrmFuncionarios: TFrmFuncionarios
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
-    ExplicitWidth = 734
   end
   inherited ImageList1: TImageList
-    Left = 32
-    Top = 424
+    Left = 16
+    Top = 520
     Bitmap = {
-      494C01010D001800300018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1426,10 +1429,10 @@ inherited FrmFuncionarios: TFrmFuncionarios
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 72
-    Top = 424
+    Left = 56
+    Top = 520
     Bitmap = {
-      494C01010D001800300018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2625,10 +2628,10 @@ inherited FrmFuncionarios: TFrmFuncionarios
       000000000000}
   end
   inherited ImageList3: TImageList
-    Left = 128
-    Top = 425
+    Left = 112
+    Top = 521
     Bitmap = {
-      494C01010D001800300018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B
@@ -3827,8 +3830,8 @@ inherited FrmFuncionarios: TFrmFuncionarios
     IndexFieldNames = 'id'
     UpdateOptions.UpdateTableName = 'ticket.dbo.funcionario'
     TableName = 'ticket.dbo.funcionario'
-    Left = 192
-    Top = 424
+    Left = 176
+    Top = 520
     object FDTabelaid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -3885,19 +3888,19 @@ inherited FrmFuncionarios: TFrmFuncionarios
     end
   end
   inherited DataSource1: TDataSource
-    Left = 248
-    Top = 424
+    Left = 232
+    Top = 520
   end
   object FDQryDepto: TFDQuery
     Connection = DM.FDConnection1
     SQL.Strings = (
       'SELECT * FROM ticket.dbo.departamento ORDER BY descricao')
-    Left = 328
-    Top = 423
+    Left = 312
+    Top = 519
   end
   object DSDepto: TDataSource
     DataSet = FDQryDepto
-    Left = 400
-    Top = 423
+    Left = 384
+    Top = 519
   end
 end

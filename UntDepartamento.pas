@@ -48,15 +48,17 @@ begin
   FrmCadDepartamento.ShowModal;
 end;
 
+
+
 procedure TFrmDepartamento.btn_inserirClick(Sender: TObject);
 begin
   inherited;
   // Habilita Botoes
+  FDTable1.Insert;
   FrmCadDepartamento.btn_salvar.Enabled:= true;
   FrmCadDepartamento.btn_cancelar.Enabled:= true;
   FrmCadDepartamento.btn_sair.Enabled:= false;
   FrmCadDepartamento.PnlFicha.Enabled:= true;
-
   FrmCadDepartamento.ShowModal;
   FDTable1.Close;
   FDTable1.Open();
