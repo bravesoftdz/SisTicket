@@ -70,7 +70,7 @@ begin
   begin
     FDTable1.Delete;
 
-    Application.MessageBox('O registro foi esxclui com sucesso.', 'Informação', MB_OK+MB_ICONINFORMATION);
+    Application.MessageBox('Registro excluído com sucesso.', 'Informação', MB_OK+MB_ICONINFORMATION);
   end
   else
     Application.MessageBox('A exclusão do registro do registro foi abortada.', 'Informação', MB_OK+MB_ICONERROR);

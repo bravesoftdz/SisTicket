@@ -16,7 +16,6 @@ type
     Panel1: TPanel;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
-    FDQuery1: TFDQuery;
     ImageList1: TImageList;
     ImageList2: TImageList;
     ImageList3: TImageList;
@@ -31,9 +30,11 @@ type
     Panel2: TPanel;
     Label1: TLabel;
     Edit1: TEdit;
+    FDTable1: TFDTable;
     procedure Edit1Change(Sender: TObject);
     procedure btn_sairClick(Sender: TObject);
     procedure btn_excluirClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,7 +52,13 @@ uses UntDM;
 
 procedure TFrmPadraoSimples.Edit1Change(Sender: TObject);
 begin
-  FDQuery1.Locate('descricao', Edit1.Text, [loCaseInsensitive,loPartialKey]);
+  FDTable1.Locate('descricao', Edit1.Text, [loCaseInsensitive,loPartialKey]);
+end;
+
+procedure TFrmPadraoSimples.FormActivate(Sender: TObject);
+begin
+  FDTable1.Close;
+  FDTable1.Open();
 end;
 
 procedure TFrmPadraoSimples.btn_excluirClick(Sender: TObject);
@@ -61,7 +68,7 @@ begin
 
   if confExcl = IDYES then
   begin
-    FDQuery1.Delete;
+    FDTable1.Delete;
 
     Application.MessageBox('O registro foi esxclui com sucesso.', 'Informação', MB_OK+MB_ICONINFORMATION);
   end

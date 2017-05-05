@@ -1,9 +1,9 @@
 inherited FrmDepartamento: TFrmDepartamento
   Caption = 'Departamentos'
-  ClientHeight = 309
+  ClientHeight = 321
   ClientWidth = 460
   ExplicitWidth = 466
-  ExplicitHeight = 338
+  ExplicitHeight = 350
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -16,6 +16,7 @@ inherited FrmDepartamento: TFrmDepartamento
     ExplicitWidth = 460
   end
   inherited DBGrid1: TDBGrid
+    Top = 153
     Width = 460
     Height = 168
     DragCursor = crNo
@@ -48,14 +49,33 @@ inherited FrmDepartamento: TFrmDepartamento
   end
   inherited Panel2: TPanel
     Width = 460
+    Height = 55
     ExplicitWidth = 460
+    ExplicitHeight = 55
+    inherited Label1: TLabel
+      Left = 32
+      Top = 12
+      Width = 50
+      Height = 15
+      Caption = 'Pesquisar:'
+      ExplicitLeft = 32
+      ExplicitTop = 12
+      ExplicitWidth = 50
+      ExplicitHeight = 15
+    end
+    inherited Edit1: TEdit
+      Left = 92
+      Height = 17
+      ExplicitLeft = 92
+      ExplicitHeight = 17
+    end
   end
   inherited DataSource1: TDataSource
     Left = 320
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C010107001800240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800280018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -658,7 +678,7 @@ inherited FrmDepartamento: TFrmDepartamento
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C010107001800240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800280018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1261,7 +1281,7 @@ inherited FrmDepartamento: TFrmDepartamento
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C010107001800240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800280018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
