@@ -57,6 +57,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
     Spacing = 0
   end
   object StatusBar1: TStatusBar
@@ -88,7 +90,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Caption = 'SisTicket - Sistema de chamados de T.I.'
     Color = clSkyBlue
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -21
     Font.Name = 'Trebuchet MS'
     Font.Style = [fsBold]
@@ -102,7 +104,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Left = 224
     Top = 272
     Bitmap = {
-      494C010105001800F40040004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105001800F80040004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000000100008000000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -4375,15 +4377,15 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
             ImageIndex = 3
           end
           item
-            Action = Action1
-            Caption = 'F&echar'
-            ImageIndex = 2
-          end
-          item
             Color = clBtnShadow
             Action = Chamados
             Caption = 'C&hamados'
             ImageIndex = 4
+          end
+          item
+            Action = Action1
+            Caption = 'F&echar'
+            ImageIndex = 2
           end>
         ActionBar = ActionToolBar1
       end>
@@ -4401,6 +4403,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     object cad_Chamado: TAction
       Category = 'Cadastro'
       Caption = 'Chamados'
+      Hint = 'Adicionar Chamados'
       ImageIndex = 1
       OnExecute = cad_ChamadoExecute
     end
@@ -4414,12 +4417,14 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     object Action2: TAction
       Category = 'Cadastro'
       Caption = 'Todos chamados'
+      Hint = 'Todos Chamados'
       ImageIndex = 3
       OnExecute = Action2Execute
     end
     object Chamados: TAction
       Category = 'Cadastro'
       Caption = 'Chamados'
+      Hint = 'Chamados'
       ImageIndex = 4
       OnExecute = ChamadosExecute
     end
