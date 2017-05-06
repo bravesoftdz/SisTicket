@@ -1,13 +1,13 @@
 inherited FrmListaChamados: TFrmListaChamados
   Caption = 'Sistema de chamados de T.I - Todos os chamados cadastrados'
   ClientHeight = 396
-  ClientWidth = 744
-  ExplicitWidth = 750
+  ClientWidth = 776
+  ExplicitWidth = 782
   ExplicitHeight = 425
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 744
+    Width = 776
     ExplicitWidth = 744
     object Label2: TLabel
       Left = 268
@@ -25,55 +25,56 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited DBGrid1: TDBGrid
     Top = 139
-    Width = 744
+    Width = 776
     Height = 257
     Align = alClient
     Columns = <
       item
         Expanded = False
         FieldName = 'id'
-        Title.Caption = 'C'#243'd-chamado'
+        Title.Alignment = taCenter
+        Title.Caption = 'C'#243'digo'
+        Width = 43
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Motivo_chamado'
-        Title.Caption = 'Motivo do chamado'
-        Width = 117
+        Title.Caption = 'Motivo'
+        Width = 80
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nome_solicitante'
         Title.Caption = 'Solicitante'
-        Width = 89
+        Width = 144
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'dpto_solicitante'
-        Title.Caption = 'Departamento do solicitante'
-        Width = 190
+        Title.Caption = 'Departamento'
+        Width = 134
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'descricao'
-        Title.Caption = 'Descri'#231#227'o do chamado'
-        Width = 137
+        Title.Caption = 'Descri'#231#227'o'
+        Width = 276
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'status_chamado'
-        Title.Caption = 'Status do chamado'
-        Width = 155
+        Title.Caption = 'Status'
+        Width = 76
         Visible = True
       end>
   end
   inherited ToolBar1: TToolBar
-    Width = 744
-    ExplicitTop = 43
+    Width = 776
     ExplicitWidth = 744
     inherited btn_inserir: TToolButton
       Enabled = False
@@ -88,7 +89,7 @@ inherited FrmListaChamados: TFrmListaChamados
     end
   end
   inherited Panel2: TPanel
-    Width = 744
+    Width = 776
     ExplicitWidth = 744
     object SpeedButton1: TSpeedButton [1]
       Left = 327
@@ -151,7 +152,7 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C010108001800400018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010108001800440018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1051,7 +1052,7 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C010107001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1654,7 +1655,7 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C010107001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010107001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

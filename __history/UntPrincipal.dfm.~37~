@@ -37,8 +37,6 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
-    ExplicitTop = 208
-    ExplicitWidth = 665
   end
   object ActionToolBar1: TActionToolBar
     Left = 0
@@ -59,9 +57,9 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
     Spacing = 0
-    ExplicitTop = 71
-    ExplicitWidth = 665
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -70,7 +68,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Height = 19
     Panels = <
       item
-        Width = 75
+        Width = 100
       end
       item
         Width = 300
@@ -79,9 +77,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
         Width = 300
       end
       item
-        Width = 50
+        Width = 100
       end>
-    ExplicitWidth = 665
   end
   object Panel1: TPanel
     Left = 0
@@ -93,22 +90,21 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Caption = 'SisTicket - Sistema de chamados de T.I.'
     Color = clSkyBlue
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -21
     Font.Name = 'Trebuchet MS'
     Font.Style = [fsBold]
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 665
   end
   object ImageList1: TImageList
     Height = 64
     Width = 64
-    Left = 192
-    Top = 264
+    Left = 224
+    Top = 272
     Bitmap = {
-      494C010105001800EC0040004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105001800F80040004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000000100008000000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -4381,15 +4377,15 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
             ImageIndex = 3
           end
           item
-            Action = Action1
-            Caption = 'F&echar'
-            ImageIndex = 2
-          end
-          item
             Color = clBtnShadow
             Action = Chamados
             Caption = 'C&hamados'
             ImageIndex = 4
+          end
+          item
+            Action = Action1
+            Caption = 'F&echar'
+            ImageIndex = 2
           end>
         ActionBar = ActionToolBar1
       end>
@@ -4407,6 +4403,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     object cad_Chamado: TAction
       Category = 'Cadastro'
       Caption = 'Chamados'
+      Hint = 'Adicionar Chamados'
       ImageIndex = 1
       OnExecute = cad_ChamadoExecute
     end
@@ -4420,19 +4417,21 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     object Action2: TAction
       Category = 'Cadastro'
       Caption = 'Todos chamados'
+      Hint = 'Todos Chamados'
       ImageIndex = 3
       OnExecute = Action2Execute
     end
     object Chamados: TAction
       Category = 'Cadastro'
       Caption = 'Chamados'
+      Hint = 'Chamados'
       ImageIndex = 4
       OnExecute = ChamadosExecute
     end
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 424
-    Top = 288
+    Left = 376
+    Top = 272
   end
 end
