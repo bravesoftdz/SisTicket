@@ -44,7 +44,6 @@ type
     FDQryDpto: TFDQuery;
     DSDpto: TDataSource;
     FDTable1dpto_solicitante: TStringField;
-    Label2: TLabel;
     FDQryStatus_chamado: TFDQuery;
     DSStatus_chamado: TDataSource;
     FDTable1status_chamado: TStringField;
@@ -79,7 +78,9 @@ begin
 procedure TFrmListaChamados.ToolButton1Click(Sender: TObject);
 begin
   inherited;
+
   FrmAtendeChamado.showmodal;
+
 end;
 
 end.

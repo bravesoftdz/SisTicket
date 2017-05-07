@@ -9,20 +9,41 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList,
   Vcl.ImgList, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Buttons, Vcl.ExtCtrls,
-  Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask;
+  Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask, Vcl.Grids, Vcl.DBGrids;
 
 type
   TFrmAtendeChamado = class(TFrmPadrao1)
-    Label2: TLabel;
-    DBEdit1: TDBEdit;
-    Label3: TLabel;
-    DBEdit2: TDBEdit;
-    Label4: TLabel;
-    DBLookupComboBox1: TDBLookupComboBox;
-    Label5: TLabel;
-    DBEdit3: TDBEdit;
     FDQryFuncionarios: TFDQuery;
     DSFuncionarios: TDataSource;
+    Panel1: TPanel;
+    ScrollBox1: TScrollBox;
+    Panel2: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label5: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit5: TDBEdit;
+    DBLookupComboBox2: TDBLookupComboBox;
+    DBMemo1: TDBMemo;
+    GroupBox1: TGroupBox;
+    Label4: TLabel;
+    Label6: TLabel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    DBEdit3: TDBEdit;
+    DBGrid1: TDBGrid;
+    DBLookupComboBox1: TDBLookupComboBox;
+    GroupBox2: TGroupBox;
+    Label10: TLabel;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    DBMemo2: TDBMemo;
+    DBGrid2: TDBGrid;
   private
     { Private declarations }
   public
