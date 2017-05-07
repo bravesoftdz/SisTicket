@@ -7,16 +7,12 @@ inherited FrmListaChamados: TFrmListaChamados
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-<<<<<<< HEAD
     Width = 744
     Caption = 'Todos os Chamados'
     Font.Color = clWhite
     Font.Height = -21
     Font.Style = [fsBold]
     ParentFont = False
-=======
-    Width = 776
->>>>>>> aa1e15ad74d910d722f6048f105bf07348054069
     ExplicitWidth = 744
   end
   inherited DBGrid1: TDBGrid
@@ -70,11 +66,7 @@ inherited FrmListaChamados: TFrmListaChamados
       end>
   end
   inherited ToolBar1: TToolBar
-<<<<<<< HEAD
     Width = 744
-=======
-    Width = 776
->>>>>>> aa1e15ad74d910d722f6048f105bf07348054069
     ExplicitWidth = 744
     inherited btn_inserir: TToolButton
       Enabled = False
