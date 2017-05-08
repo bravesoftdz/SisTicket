@@ -1,9 +1,10 @@
 inherited FrmAtendeChamado: TFrmAtendeChamado
-  Width = 760
-  Height = 851
   AutoSize = True
   Caption = 'Sistema de chamados de T.I - Atender chamado'
-  ExplicitTop = -279
+  ClientHeight = 822
+  ClientWidth = 754
+  OnActivate = FormActivate
+  ExplicitTop = -419
   ExplicitWidth = 760
   ExplicitHeight = 851
   PixelsPerInch = 96
@@ -12,27 +13,29 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Top = 57
     Width = 754
     Height = 57
+    ExplicitTop = 57
     ExplicitWidth = 754
     ExplicitHeight = 57
   end
   inherited StatusBar1: TStatusBar
     Top = 803
     Width = 754
+    ExplicitTop = 803
     ExplicitWidth = 754
   end
   inherited PanelEntrada: TPanel
     Top = 114
     Width = 754
-    ExplicitTop = 57
+    ExplicitTop = 114
     ExplicitWidth = 754
     inherited Label1: TLabel
-      Left = 32
+      Left = 30
       Top = 6
-      Width = 94
+      Width = 96
       Caption = 'C'#243'digo do chamado'
-      ExplicitLeft = 32
+      ExplicitLeft = 30
       ExplicitTop = 6
-      ExplicitWidth = 94
+      ExplicitWidth = 96
     end
     inherited btnOK: TSpeedButton
       Left = 259
@@ -43,184 +46,174 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     inherited valorCampo: TEdit
       Left = 132
       Top = 3
+      ReadOnly = True
       ExplicitLeft = 132
       ExplicitTop = 3
+    end
+    inherited CheckHabilita: TDBCheckBox
+      Width = 125
+      DataField = 'status'
+      DataSource = FrmListaChamados.DataSource1
+      ExplicitWidth = 125
     end
   end
   inherited PnlFicha: TPanel
     Top = 144
     Width = 754
     Height = 659
+    ParentBackground = False
+    ExplicitLeft = 80
     ExplicitTop = 143
     ExplicitWidth = 754
-    ExplicitHeight = 227
+    ExplicitHeight = 659
     object Label2: TLabel
-      Left = 32
-      Top = 18
+      Left = 31
+      Top = 9
       Width = 94
       Height = 13
       Caption = 'C'#243'digo do chamado'
     end
     object Label3: TLabel
       Left = 77
-      Top = 56
+      Top = 80
       Width = 49
       Height = 13
       Caption = 'Solicitante'
     end
     object Label5: TLabel
       Left = 334
-      Top = 18
+      Top = 42
       Width = 102
       Height = 13
       Caption = 'Prazo para conclus'#227'o'
     end
     object Label7: TLabel
-      Left = 31
-      Top = 235
+      Left = 30
+      Top = 234
       Width = 95
       Height = 13
       Caption = 'Motivo do Chamado'
     end
     object Label8: TLabel
       Left = 80
-      Top = 268
+      Top = 271
       Width = 46
       Height = 13
       Caption = 'Descri'#231#227'o'
     end
     object Label9: TLabel
       Left = 68
-      Top = 301
+      Top = 309
       Width = 58
       Height = 13
       Caption = 'Observa'#231#227'o'
     end
+    object Label11: TLabel
+      Left = 95
+      Top = 42
+      Width = 31
+      Height = 13
+      Caption = 'Status'
+    end
+    object Label4: TLabel
+      Left = 23
+      Top = 115
+      Width = 103
+      Height = 13
+      Caption = 'Respons'#225'vel Principal'
+    end
+    object Label6: TLabel
+      Left = 25
+      Top = 168
+      Width = 99
+      Height = 13
+      Caption = 'Outros respons'#225'veis'
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 439
+      Top = 139
+      Width = 65
+      Height = 22
+      Caption = 'Adicionar'
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 377
+      Top = 139
+      Width = 56
+      Height = 22
+      Caption = 'Excluir'
+    end
     object DBEdit1: TDBEdit
-      Left = 132
-      Top = 15
+      Left = 131
+      Top = 6
       Width = 173
       Height = 21
       DataField = 'id'
-      DataSource = DataSource1
+      DataSource = FrmListaChamados.DataSource1
       ReadOnly = True
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
       Left = 132
-      Top = 53
-      Width = 371
+      Top = 77
+      Width = 61
       Height = 21
-      DataField = 'nome'
-      DataSource = DSFuncionarios
+      DataField = 'id_solicitante'
+      DataSource = FrmListaChamados.DataSource1
       ReadOnly = True
-      TabOrder = 1
+      TabOrder = 2
     end
     object DBEdit4: TDBEdit
       Left = 442
-      Top = 15
+      Top = 39
       Width = 132
       Height = 21
-      TabOrder = 2
+      DataField = 'data_prazo'
+      DataSource = FrmListaChamados.DataSource1
+      TabOrder = 1
     end
     object DBEdit5: TDBEdit
       Left = 132
-      Top = 265
-      Width = 371
+      Top = 268
+      Width = 442
       Height = 21
-      ReadOnly = True
-      TabOrder = 3
-    end
-    object DBLookupComboBox2: TDBLookupComboBox
-      Left = 131
-      Top = 231
-      Width = 372
-      Height = 21
+      DataField = 'descricao'
+      DataSource = FrmListaChamados.DataSource1
       ReadOnly = True
       TabOrder = 4
     end
-    object DBMemo1: TDBMemo
-      Left = 132
-      Top = 298
-      Width = 371
-      Height = 89
+    object DBLookupComboBox2: TDBLookupComboBox
+      Left = 131
+      Top = 230
+      Width = 443
+      Height = 21
+      DataField = 'id_tipo'
+      DataSource = FrmListaChamados.DataSource1
+      KeyField = 'id'
+      ListField = 'descricao'
+      ListSource = DSTipoMotivo
       ReadOnly = True
       TabOrder = 5
     end
-    object GroupBox1: TGroupBox
-      Left = 32
-      Top = 80
-      Width = 542
-      Height = 137
-      Caption = 'Respons'#225'veis'
+    object DBMemo1: TDBMemo
+      Left = 132
+      Top = 306
+      Width = 442
+      Height = 71
+      DataField = 'observacao'
+      DataSource = FrmListaChamados.DataSource1
+      ReadOnly = True
       TabOrder = 6
-      object Label4: TLabel
-        Left = 8
-        Top = 28
-        Width = 103
-        Height = 13
-        Caption = 'Respons'#225'vel Principal'
-      end
-      object Label6: TLabel
-        Left = 10
-        Top = 81
-        Width = 99
-        Height = 13
-        Caption = 'Outros respons'#225'veis'
-      end
-      object SpeedButton1: TSpeedButton
-        Left = 424
-        Top = 52
-        Width = 65
-        Height = 22
-        Caption = 'Adicionar'
-      end
-      object SpeedButton2: TSpeedButton
-        Left = 362
-        Top = 52
-        Width = 56
-        Height = 22
-        Caption = 'Excluir'
-      end
-      object DBEdit3: TDBEdit
-        Left = 117
-        Top = 25
-        Width = 63
-        Height = 21
-        DataField = 'id_responsavel'
-        DataSource = DataSource1
-        TabOrder = 0
-      end
-      object DBGrid1: TDBGrid
-        Left = 120
-        Top = 81
-        Width = 369
-        Height = 48
-        ReadOnly = True
-        TabOrder = 2
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-      end
-      object DBLookupComboBox1: TDBLookupComboBox
-        Left = 186
-        Top = 25
-        Width = 302
-        Height = 21
-        DataField = 'id_responsavel'
-        DataSource = DataSource1
-        ListSource = DSFuncionarios
-        TabOrder = 1
-      end
     end
     object GroupBox2: TGroupBox
-      Left = 32
-      Top = 393
-      Width = 542
+      Left = 77
+      Top = 383
+      Width = 522
       Height = 248
       Caption = 'Hist'#243'ricos'
+      Color = clBtnFace
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 7
       object Label10: TLabel
         Left = 45
@@ -230,31 +223,34 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
         Caption = 'Descri'#231#227'o'
       end
       object SpeedButton3: TSpeedButton
-        Left = 346
-        Top = 119
+        Left = 336
+        Top = 111
         Width = 61
         Height = 22
         Caption = 'Limpar'
       end
       object SpeedButton4: TSpeedButton
-        Left = 413
-        Top = 119
+        Left = 403
+        Top = 111
         Width = 85
         Height = 22
         Caption = 'Incluir Hist'#243'rico'
       end
       object DBMemo2: TDBMemo
-        Left = 45
+        Left = 56
         Top = 43
-        Width = 453
-        Height = 70
+        Width = 441
+        Height = 62
+        DataSource = DSHistoricoChamado
         TabOrder = 0
       end
       object DBGrid2: TDBGrid
-        Left = 45
-        Top = 147
-        Width = 453
+        Left = 56
+        Top = 139
+        Width = 441
         Height = 88
+        DataSource = DSHistoricoChamado
+        ReadOnly = True
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -262,6 +258,83 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
       end
+    end
+    object DBLookupComboBox3: TDBLookupComboBox
+      Left = 201
+      Top = 77
+      Width = 373
+      Height = 21
+      DataField = 'id_solicitante'
+      DataSource = FrmListaChamados.DataSource1
+      KeyField = 'id'
+      ListField = 'nome'
+      ListSource = DSFuncionarios
+      ReadOnly = True
+      TabOrder = 3
+    end
+    object DBEdit3: TDBEdit
+      Left = 132
+      Top = 112
+      Width = 63
+      Height = 21
+      DataField = 'id_responsavel'
+      DataSource = FrmListaChamados.DataSource1
+      TabOrder = 8
+    end
+    object DBGrid1: TDBGrid
+      Left = 132
+      Top = 167
+      Width = 442
+      Height = 48
+      DataSource = DSFuncionarioxChamado
+      ReadOnly = True
+      TabOrder = 9
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          Title.Caption = 'C'#243'digo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          Title.Caption = 'Nome'
+          Width = 262
+          Visible = True
+        end
+        item
+          Expanded = False
+          Title.Caption = 'Cargo'
+          Visible = True
+        end>
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 201
+      Top = 112
+      Width = 373
+      Height = 21
+      DataField = 'id_responsavel'
+      DataSource = FrmListaChamados.DataSource1
+      KeyField = 'id'
+      ListField = 'nome'
+      ListSource = DSFuncionarios
+      TabOrder = 10
+    end
+    object DBLookupComboBox4: TDBLookupComboBox
+      Left = 132
+      Top = 39
+      Width = 145
+      Height = 21
+      DataField = 'id_status'
+      DataSource = FrmListaChamados.DataSource1
+      KeyField = 'id'
+      ListField = 'descricao'
+      ListSource = DSStatus
+      TabOrder = 11
     end
   end
   object Panel1: TPanel [4]
@@ -285,7 +358,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Left = 656
     Top = 352
     Bitmap = {
-      494C01010D001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1484,7 +1557,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Left = 656
     Top = 416
     Bitmap = {
-      494C01010D001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2683,7 +2756,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Left = 648
     Top = 465
     Bitmap = {
-      494C01010D001800340018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B
@@ -3900,5 +3973,66 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     DataSet = FDQryFuncionarios
     Left = 704
     Top = 527
+  end
+  object FDTblStatus: TFDTable
+    IndexFieldNames = 'id'
+    Connection = DM.FDConnection1
+    UpdateOptions.UpdateTableName = 'ticket.dbo.status_chamado'
+    TableName = 'ticket.dbo.status_chamado'
+    Left = 704
+    Top = 296
+    object FDTblStatusid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDTblStatusdescricao: TStringField
+      FieldName = 'descricao'
+      Origin = 'descricao'
+      Size = 200
+    end
+  end
+  object DSStatus: TDataSource
+    DataSet = FDTblStatus
+    Left = 704
+    Top = 232
+  end
+  object FDQryFuncionarioXChamado: TFDQuery
+    Connection = DM.FDConnection1
+    SQL.Strings = (
+      'SELECT FUNCHAM.*, FUNC.* '
+      #9'FROM funcionarioxchamado AS FUNCHAM '
+      'INNER JOIN funcionario AS FUNC'
+      #9'ON FUNC.id = FUNCHAM.id_funcionario')
+    Left = 640
+    Top = 288
+  end
+  object DSFuncionarioxChamado: TDataSource
+    Left = 640
+    Top = 232
+  end
+  object FDQryHistoricoChamado: TFDQuery
+    Connection = DM.FDConnection1
+    Left = 648
+    Top = 592
+  end
+  object DSHistoricoChamado: TDataSource
+    DataSet = FDQryHistoricoChamado
+    Left = 648
+    Top = 648
+  end
+  object FDTblTipoMotivo: TFDTable
+    IndexFieldNames = 'id'
+    Connection = DM.FDConnection1
+    UpdateOptions.UpdateTableName = 'ticket.dbo.tipo'
+    TableName = 'ticket.dbo.tipo'
+    Left = 640
+    Top = 184
+  end
+  object DSTipoMotivo: TDataSource
+    DataSet = FDTblTipoMotivo
+    Left = 704
+    Top = 184
   end
 end

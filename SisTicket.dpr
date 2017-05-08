@@ -12,7 +12,9 @@ uses
   UntDepartamento in 'UntDepartamento.pas' {FrmDepartamento},
   UntChamado in 'UntChamado.pas' {Frmchamado},
   UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
-  UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado};
+  UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 

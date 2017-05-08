@@ -16,8 +16,6 @@ type
     FDQryFuncionarios: TFDQuery;
     DSFuncionarios: TDataSource;
     Panel1: TPanel;
-    ScrollBox1: TScrollBox;
-    Panel2: TPanel;
     Label2: TLabel;
     Label3: TLabel;
     Label5: TLabel;
@@ -30,7 +28,6 @@ type
     DBEdit5: TDBEdit;
     DBLookupComboBox2: TDBLookupComboBox;
     DBMemo1: TDBMemo;
-    GroupBox1: TGroupBox;
     Label4: TLabel;
     Label6: TLabel;
     SpeedButton1: TSpeedButton;
@@ -44,6 +41,20 @@ type
     SpeedButton4: TSpeedButton;
     DBMemo2: TDBMemo;
     DBGrid2: TDBGrid;
+    Label11: TLabel;
+    DBLookupComboBox3: TDBLookupComboBox;
+    DBLookupComboBox4: TDBLookupComboBox;
+    FDTblStatus: TFDTable;
+    DSStatus: TDataSource;
+    FDTblStatusid: TFDAutoIncField;
+    FDTblStatusdescricao: TStringField;
+    FDQryFuncionarioXChamado: TFDQuery;
+    DSFuncionarioxChamado: TDataSource;
+    FDQryHistoricoChamado: TFDQuery;
+    DSHistoricoChamado: TDataSource;
+    FDTblTipoMotivo: TFDTable;
+    DSTipoMotivo: TDataSource;
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,6 +68,16 @@ implementation
 
 {$R *.dfm}
 
-uses UntDM;
+uses UntDM, UntListaChamados;
+
+procedure TFrmAtendeChamado.FormActivate(Sender: TObject);
+begin
+  inherited;
+  FDQryFuncionarios.Close;
+  FDQryFuncionarios.Open();
+
+  FDTblStatus.Close;
+  FDTblStatus.Open();
+end;
 
 end.

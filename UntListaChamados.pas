@@ -78,9 +78,21 @@ begin
 procedure TFrmListaChamados.ToolButton1Click(Sender: TObject);
 begin
   inherited;
+  //Comando para a Iniciar edição da tabela
+  FDTable1.Edit;
 
-  FrmAtendeChamado.showmodal;
+  // Retira visibilidade dos Botoes
+  FrmAtendeChamado.btn_Pesquisa.Visible := false;
+  FrmAtendeChamado.btn_Ordenar.Visible := false;
+  FrmAtendeChamado.separador1.Visible := false;
+  FrmAtendeChamado.btn_primeiro.Visible := false;
+  FrmAtendeChamado.btn_Anterior.Visible := false;
+  FrmAtendeChamado.btn_proximo.Visible := false;
+  FrmAtendeChamado.btn_ultimo.Visible := false;
+  FrmAtendeChamado.Separador2.Visible := false;
+  FrmAtendeChamado.btn_Inserir.Visible := false;
 
+  FrmAtendeChamado.ShowModal;
 end;
 
 end.

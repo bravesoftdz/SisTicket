@@ -7,13 +7,13 @@ inherited FrmListaChamados: TFrmListaChamados
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 744
+    Width = 776
     Caption = 'Todos os Chamados'
     Font.Color = clWhite
     Font.Height = -21
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitWidth = 744
+    ExplicitWidth = 776
   end
   inherited DBGrid1: TDBGrid
     Top = 139
@@ -66,47 +66,23 @@ inherited FrmListaChamados: TFrmListaChamados
       end>
   end
   inherited ToolBar1: TToolBar
-    Width = 744
-    ExplicitWidth = 744
+    Width = 776
+    ExplicitWidth = 776
     inherited btn_inserir: TToolButton
       Enabled = False
     end
-    object ToolButton1: TToolButton [1]
-      Left = 43
+    object ToolButton1: TToolButton
+      Left = 231
       Top = 0
       Hint = 'Atender um chamado'
       Caption = 'ToolButton1'
       ImageIndex = 7
       OnClick = ToolButton1Click
     end
-    inherited btn_editar: TToolButton
-      Left = 86
-      ExplicitLeft = 86
-    end
-    inherited btn_excluir: TToolButton
-      Left = 129
-      ExplicitLeft = 129
-    end
-    inherited ToolButton4: TToolButton
-      Left = 172
-      ExplicitLeft = 172
-    end
-    inherited btn_imprimir: TToolButton
-      Left = 180
-      ExplicitLeft = 180
-    end
-    inherited ToolButton5: TToolButton
-      Left = 223
-      ExplicitLeft = 223
-    end
-    inherited btn_sair: TToolButton
-      Left = 231
-      ExplicitLeft = 231
-    end
   end
   inherited Panel2: TPanel
     Width = 776
-    ExplicitWidth = 744
+    ExplicitWidth = 776
     object SpeedButton1: TSpeedButton [1]
       Left = 327
       Top = 11
@@ -168,7 +144,7 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C010108001800440018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010108001800480018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1068,7 +1044,7 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C010107001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1671,7 +1647,7 @@ inherited FrmListaChamados: TFrmListaChamados
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C010107001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
