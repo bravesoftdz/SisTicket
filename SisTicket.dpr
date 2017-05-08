@@ -15,7 +15,11 @@ uses
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
   Vcl.Themes,
   Vcl.Styles,
+<<<<<<< HEAD
   UntLogin in 'UntLogin.pas' {FrmLogin};
+=======
+  UntPadraoRel in 'UntPadraoRel.pas' {FrmPadroRel};
+>>>>>>> ae6545858de316b525a20e0a3a24da5680eb5fe6
 
 {$R *.res}
 
@@ -33,6 +37,10 @@ begin
   Application.CreateForm(TFrmchamado, Frmchamado);
   Application.CreateForm(TFrmListaChamados, FrmListaChamados);
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
+<<<<<<< HEAD
   Application.CreateForm(TFrmLogin, FrmLogin);
+=======
+  Application.CreateForm(TFrmPadroRel, FrmPadroRel);
+>>>>>>> ae6545858de316b525a20e0a3a24da5680eb5fe6
   Application.Run;
 end.

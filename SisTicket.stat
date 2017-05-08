@@ -2,11 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 EditorSecs=6369
 DesignerSecs=9594
 InspectorSecs=7646
 CompileSecs=408702
 OtherSecs=7922
+=======
+EditorSecs=6181
+DesignerSecs=9227
+InspectorSecs=7220
+CompileSecs=398646
+OtherSecs=8936
+>>>>>>> ae6545858de316b525a20e0a3a24da5680eb5fe6
 =======
 EditorSecs=5531
 DesignerSecs=6464
