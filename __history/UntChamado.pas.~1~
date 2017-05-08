@@ -35,7 +35,6 @@ type
     DSTipo: TDataSource;
     DBMemo2: TDBMemo;
     DBEdit6: TDBEdit;
-    Panel1: TPanel;
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }

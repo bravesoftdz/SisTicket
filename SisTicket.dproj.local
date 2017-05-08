@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2017/05/08 10:59:20.382,=C:\Users\wrpd\Dropbox\SisTicket- Sistema de Chamado em TI - Unimep\SisTicket\Unit1.pas</Transaction>
+    <Transaction>2017/05/08 11:55:22.262,C:\Users\wrpd\Dropbox\SisTicket- Sistema de Chamado em TI - Unimep\SisTicket\UntLogin.pas=C:\Users\wrpd\Dropbox\SisTicket- Sistema de Chamado em TI - Unimep\SisTicket\Unit1.pas</Transaction>
+    <Transaction>2017/05/08 11:55:22.262,C:\Users\wrpd\Dropbox\SisTicket- Sistema de Chamado em TI - Unimep\SisTicket\UntLogin.dfm=C:\Users\wrpd\Dropbox\SisTicket- Sistema de Chamado em TI - Unimep\SisTicket\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -14,8 +14,7 @@ uses
   UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
   Vcl.Themes,
-  Vcl.Styles,
-  UntLogin in 'UntLogin.pas' {FrmLogin};
+  Vcl.Styles;
 
 {$R *.res}
 
@@ -33,6 +32,5 @@ begin
   Application.CreateForm(TFrmchamado, Frmchamado);
   Application.CreateForm(TFrmListaChamados, FrmListaChamados);
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
-  Application.CreateForm(TFrmLogin, FrmLogin);
   Application.Run;
 end.

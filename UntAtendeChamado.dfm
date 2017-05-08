@@ -4,7 +4,6 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
   ClientHeight = 822
   ClientWidth = 754
   OnActivate = FormActivate
-  ExplicitTop = -419
   ExplicitWidth = 760
   ExplicitHeight = 851
   PixelsPerInch = 96
@@ -31,11 +30,11 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     inherited Label1: TLabel
       Left = 30
       Top = 6
-      Width = 96
+      Width = 94
       Caption = 'C'#243'digo do chamado'
       ExplicitLeft = 30
       ExplicitTop = 6
-      ExplicitWidth = 96
+      ExplicitWidth = 94
     end
     inherited btnOK: TSpeedButton
       Left = 259
@@ -53,7 +52,6 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     inherited CheckHabilita: TDBCheckBox
       Width = 125
       DataField = 'status'
-      DataSource = FrmListaChamados.DataSource1
       ExplicitWidth = 125
     end
   end
@@ -62,8 +60,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Width = 754
     Height = 659
     ParentBackground = False
-    ExplicitLeft = 80
-    ExplicitTop = 143
+    ExplicitTop = 144
     ExplicitWidth = 754
     ExplicitHeight = 659
     object Label2: TLabel
@@ -344,7 +341,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Height = 57
     Align = alTop
     Caption = 'Atender Chamado'
-    Color = clBlack
+    Color = clGray
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -21
@@ -358,7 +355,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Left = 656
     Top = 352
     Bitmap = {
-      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D0018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1557,7 +1554,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Left = 656
     Top = 416
     Bitmap = {
-      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D0018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2756,7 +2753,7 @@ inherited FrmAtendeChamado: TFrmAtendeChamado
     Left = 648
     Top = 465
     Bitmap = {
-      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D0018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B
