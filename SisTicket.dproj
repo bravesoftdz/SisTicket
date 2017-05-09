@@ -129,13 +129,12 @@
             <Form>FrmAtendeChamado</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-<<<<<<< HEAD
         <DCCReference Include="UntLogin.pas">
             <Form>FrmLogin</Form>
-=======
+			<FormType>dfm</FormType>
+		</DCCReference>
         <DCCReference Include="UntPadraoRel.pas">
             <Form>FrmPadroRel</Form>
->>>>>>> ae6545858de316b525a20e0a3a24da5680eb5fe6
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
