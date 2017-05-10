@@ -73,7 +73,6 @@ begin
   FDQryDepto.Open();
 end;
 
-
 procedure TFrmFuncionarios.SpeedButton1Click(Sender: TObject);
 begin
   inherited;

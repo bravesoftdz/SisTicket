@@ -33,7 +33,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntPrincipal, UntDM;
+uses UntPrincipal;
 
 
 procedure TFrmLogin.spbOkClick(Sender: TObject);
@@ -100,6 +100,10 @@ begin
       showmessage := 'Login não autorizado... '+
       'Tente novamente';
   end;
+end;
+end;
+begin
+
 end;
 
 end.

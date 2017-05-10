@@ -33,7 +33,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntPrincipal, UntDM;
+uses UntPrincipal;
 
 
 procedure TFrmLogin.spbOkClick(Sender: TObject);

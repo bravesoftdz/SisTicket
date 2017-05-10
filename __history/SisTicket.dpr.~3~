@@ -15,23 +15,6 @@ uses
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
   Vcl.Themes,
   Vcl.Styles,
-  UntLogin in 'UntLogin.pas' {FrmLogin};
-
-uses
-  Vcl.Forms,
-  UntPrincipal in 'UntPrincipal.pas' {FrmMenuPrincipal},
-  UntDM in 'UntDM.pas' {DM: TDataModule},
-  UntPadrao1 in 'UntPadrao1.pas' {FrmPadrao1},
-  UntCadSimples in 'UntCadSimples.pas' {FrmCadSimples},
-  UntCadDepartamento in 'UntCadDepartamento.pas' {FrmCadDepartamento},
-  UntFuncionarios in 'UntFuncionarios.pas' {FrmFuncionarios},
-  UntPadraoSimples in 'UntPadraoSimples.pas' {FrmPadraoSimples},
-  UntDepartamento in 'UntDepartamento.pas' {FrmDepartamento},
-  UntChamado in 'UntChamado.pas' {Frmchamado},
-  UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
-  UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
-  Vcl.Themes,
-  Vcl.Styles,
 <<<<<<< HEAD
   UntLogin in 'UntLogin.pas' {FrmLogin};
 =======
@@ -54,8 +37,7 @@ begin
   Application.CreateForm(TFrmchamado, Frmchamado);
   Application.CreateForm(TFrmListaChamados, FrmListaChamados);
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
-  Application.CreateForm(TFrmLogin, FrmLogin);
-  <<<<<<< HEAD
+<<<<<<< HEAD
   Application.CreateForm(TFrmLogin, FrmLogin);
 =======
   Application.CreateForm(TFrmPadroRel, FrmPadroRel);

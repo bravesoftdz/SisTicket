@@ -6,11 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList,
   Vcl.PlatformDefaultStyleActnCtrls, Vcl.ActnMan, System.ImageList, Vcl.ImgList,
-  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.ComCtrls, Vcl.ExtCtrls, WiniNet,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
-  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.ComCtrls, Vcl.ExtCtrls, WiniNet;
 
 type
   TFrmMenuPrincipal = class(TForm)
@@ -26,7 +22,6 @@ type
     Action2: TAction;
     Panel1: TPanel;
     Chamados: TAction;
-    QueryLogin: TFDQuery;
     procedure Action1Execute(Sender: TObject);
     procedure cad_FuncionarioExecute(Sender: TObject);
     procedure cad_ChamadoExecute(Sender: TObject);
@@ -51,7 +46,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntPadrao1, UntFuncionarios, UntChamado, UntListaChamados, UntDM;
+uses UntPadrao1, UntFuncionarios, UntChamado, UntListaChamados;
 
 procedure TFrmMenuPrincipal.ChamadosExecute(Sender: TObject);
 begin
