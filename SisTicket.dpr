@@ -13,32 +13,16 @@ uses
   UntChamado in 'UntChamado.pas' {Frmchamado},
   UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
-  Vcl.Themes,
-  Vcl.Styles,
   UntLogin in 'UntLogin.pas' {FrmLogin},
   UntRelatorioPadrao in 'UntRelatorioPadrao.pas' {FrmRelatorioPadrao},
-  UntRelatorioFuncionario in 'UntRelatorioFuncionario.pas' {FrmRelatorioFuncionario};
-
-uses
-  Vcl.Forms,
-  UntPrincipal in 'UntPrincipal.pas' {FrmMenuPrincipal},
-  UntDM in 'UntDM.pas' {DM: TDataModule},
-  UntPadrao1 in 'UntPadrao1.pas' {FrmPadrao1},
-  UntCadSimples in 'UntCadSimples.pas' {FrmCadSimples},
-  UntCadDepartamento in 'UntCadDepartamento.pas' {FrmCadDepartamento},
-  UntFuncionarios in 'UntFuncionarios.pas' {FrmFuncionarios},
-  UntPadraoSimples in 'UntPadraoSimples.pas' {FrmPadraoSimples},
-  UntDepartamento in 'UntDepartamento.pas' {FrmDepartamento},
-  UntChamado in 'UntChamado.pas' {Frmchamado},
-  UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
-  UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
+  UntRelatorioFuncionario in 'UntRelatorioFuncionario.pas' {FrmRelatorioFuncionario},
   Vcl.Themes,
-  Vcl.Styles,
-<<<<<<< HEAD
-  UntLogin in 'UntLogin.pas' {FrmLogin};
-=======
-  UntPadraoRel in 'UntPadraoRel.pas' {FrmPadroRel};
->>>>>>> ae6545858de316b525a20e0a3a24da5680eb5fe6
+  Vcl.Styles;
+
+
+
+
+
 
 {$R *.res}
 
@@ -59,10 +43,6 @@ begin
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmRelatorioPadrao, FrmRelatorioPadrao);
   Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
-  <<<<<<< HEAD
   Application.CreateForm(TFrmLogin, FrmLogin);
-=======
-  Application.CreateForm(TFrmPadroRel, FrmPadroRel);
->>>>>>> ae6545858de316b525a20e0a3a24da5680eb5fe6
   Application.Run;
 end.
