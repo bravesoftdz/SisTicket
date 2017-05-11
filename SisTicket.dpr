@@ -13,10 +13,20 @@ uses
   UntChamado in 'UntChamado.pas' {Frmchamado},
   UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
+  UntLogin in 'UntLogin.pas' {FrmLogin},
+  UntRelatorioPadrao in 'UntRelatorioPadrao.pas' {FrmRelatorioPadrao},
+  UntRelatorioFuncionario in 'UntRelatorioFuncionario.pas' {FrmRelatorioFuncionario},
   Vcl.Themes,
-  Vcl.Styles,
-  UntLogin in 'UntLogin.pas' {FrmLogin};
+  Vcl.Styles;
 
+
+
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> ccfa965c4419a2706e422df63cd037871560e663
 {$R *.res}
 
 begin
@@ -34,5 +44,11 @@ begin
   Application.CreateForm(TFrmListaChamados, FrmListaChamados);
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
   Application.CreateForm(TFrmLogin, FrmLogin);
+<<<<<<< HEAD
+=======
+  Application.CreateForm(TFrmRelatorioPadrao, FrmRelatorioPadrao);
+  Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
+  Application.CreateForm(TFrmLogin, FrmLogin);
+>>>>>>> ccfa965c4419a2706e422df63cd037871560e663
   Application.Run;
 end.
