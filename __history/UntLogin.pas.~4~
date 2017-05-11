@@ -18,8 +18,8 @@ type
     Image1: TImage;
     spbOk: TSpeedButton;
     spbCancelar: TSpeedButton;
-  //  procedure EdtNomeChange(Sender: TObject);
-//    procedure spbOkClick(Sender: TObject);
+    procedure EdtNomeChange(Sender: TObject);
+    procedure spbOkClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +35,7 @@ implementation
 
 uses UntPrincipal, UntDM;
 
-{
+
 procedure TFrmLogin.spbOkClick(Sender: TObject);
 var mensagem, StrSql: String;
 begin
@@ -101,5 +101,5 @@ begin
       'Tente novamente';
   end;
 end;
- }
+
 end.

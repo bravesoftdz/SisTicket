@@ -47,27 +47,8 @@ type
     SpeedButton1: TSpeedButton;
     Panel1: TPanel;
     GroupBox1: TGroupBox;
-    GroupBox2: TGroupBox;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    DBEdit9: TDBEdit;
-    DBEdit10: TDBEdit;
-    EdtSenhaConfirma: TEdit;
-    FDTabelacargo: TStringField;
-    FDTabelausuario: TStringField;
-    FDTabelasenha: TStringField;
-    FDTabelafk_id_nivel: TIntegerField;
-    DBEdit11: TDBEdit;
-    Label12: TLabel;
-    ImgOk: TImage;
-    ImgErro: TImage;
-    DBRadioGroup1: TDBRadioGroup;
-    Label13: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure EdtSenhaConfirmaExit(Sender: TObject);
-    procedure btn_salvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -82,37 +63,6 @@ implementation
 {$R *.dfm}
 
 uses UntDM, UntDepartamento;
-
-
-
-
-
-procedure TFrmFuncionarios.btn_salvarClick(Sender: TObject);
-begin
-    if (EdtSenhaConfirma.Text<> '') and (DBEdit9.Text<>'') and (DBEdit10.Text <> '') and (DBEdit1.Text <> '')and (DBEdit2.Text <> '') and (DBEdit3.Text <> '') and (DBEdit4.Text <> '') and (DBEdit11.Text <> '') then
-    showmessage ('Verifique as informações!')
-    else
-
-  inherited;
-
-end;
-
-procedure TFrmFuncionarios.EdtSenhaConfirmaExit(Sender: TObject);
-begin
-  inherited;
-      if (EdtSenhaConfirma.Text = DBEdit10.Text) then
-        begin
-          ImgOk.Visible := True;
-          ImgErro.Visible := False;
-          label13.Visible := False;
-        end
-      else
-        begin
-          ImgErro.Visible := True;
-          ImgOk.Visible := False;
-          label13.Visible := True;
-        end;
-end;
 
 procedure TFrmFuncionarios.FormActivate(Sender: TObject);
 begin

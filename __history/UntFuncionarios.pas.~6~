@@ -89,12 +89,9 @@ uses UntDM, UntDepartamento;
 
 procedure TFrmFuncionarios.btn_salvarClick(Sender: TObject);
 begin
-    if (EdtSenhaConfirma.Text<> '') and (DBEdit9.Text<>'') and (DBEdit10.Text <> '') and (DBEdit1.Text <> '')and (DBEdit2.Text <> '') and (DBEdit3.Text <> '') and (DBEdit4.Text <> '') and (DBEdit11.Text <> '') then
-    showmessage ('Verifique as informações!')
-    else
-
   inherited;
-
+    if (EdtSenhaConfirma.Text= '') and (DBEdit9.Text='') and (DBEdit10.Text = '') then
+    showmessage ('Verifique as credenciais de acesso!')
 end;
 
 procedure TFrmFuncionarios.EdtSenhaConfirmaExit(Sender: TObject);

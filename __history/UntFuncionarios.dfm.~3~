@@ -233,7 +233,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
       Left = 78
       Top = 322
       Width = 563
-      Height = 127
+      Height = 110
       Caption = 'Informa'#231#245'es de Login'
       TabOrder = 3
       object Label10: TLabel
@@ -303,8 +303,8 @@ inherited FrmFuncionarios: TFrmFuncionarios
         Visible = False
       end
       object ImgErro: TImage
-        Left = 322
-        Top = 75
+        Left = 351
+        Top = 77
         Width = 23
         Height = 20
         Picture.Data = {
@@ -347,20 +347,6 @@ inherited FrmFuncionarios: TFrmFuncionarios
           F00F0000}
         Visible = False
       end
-      object Label13: TLabel
-        Left = 138
-        Top = 104
-        Width = 174
-        Height = 16
-        Caption = 'Verifique a senha digitada!'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -13
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Visible = False
-      end
       object DBEdit10: TDBEdit
         Left = 136
         Top = 50
@@ -369,7 +355,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
         DataField = 'senha'
         DataSource = DataSource1
         PasswordChar = '*'
-        TabOrder = 1
+        TabOrder = 0
       end
       object DBEdit9: TDBEdit
         Left = 136
@@ -378,7 +364,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
         Height = 21
         DataField = 'usuario'
         DataSource = DataSource1
-        TabOrder = 0
+        TabOrder = 1
       end
       object EdtSenhaConfirma: TEdit
         Left = 136
@@ -389,24 +375,20 @@ inherited FrmFuncionarios: TFrmFuncionarios
         ParentBiDiMode = False
         PasswordChar = '*'
         TabOrder = 2
+        Text = 'EdtSenhaConfirma'
         OnExit = EdtSenhaConfirmaExit
       end
-    end
-    object DBRadioGroup1: TDBRadioGroup
-      Left = 503
-      Top = 344
-      Width = 114
-      Height = 81
-      Caption = 'N'#237'vel de Acesso'
-      DataField = 'fk_id_nivel'
-      DataSource = DataSource1
-      Items.Strings = (
-        'Analista'
-        'Usu'#225'rio')
-      TabOrder = 4
-      Values.Strings = (
-        '1'
-        '2')
+      object RadioGroup1: TRadioGroup
+        Left = 387
+        Top = 25
+        Width = 96
+        Height = 73
+        Caption = 'N'#237'vel de Acesso'
+        Items.Strings = (
+          'Analista'
+          'Usu'#225'rio')
+        TabOrder = 3
+      end
     end
   end
   object Panel1: TPanel [4]

@@ -5,7 +5,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
   Font.Color = clBlack
   Position = poDesigned
   OnActivate = FormActivate
-  ExplicitTop = -54
+  ExplicitTop = -76
   ExplicitWidth = 739
   ExplicitHeight = 633
   PixelsPerInch = 96
@@ -389,6 +389,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
         ParentBiDiMode = False
         PasswordChar = '*'
         TabOrder = 2
+        Text = 'EdtSenhaConfirma'
         OnExit = EdtSenhaConfirmaExit
       end
     end

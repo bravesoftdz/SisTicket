@@ -14,7 +14,6 @@ type
     FDConnection1: TFDConnection;
     Trans: TFDTransaction;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-
   private
     { Private declarations }
   public
@@ -29,7 +28,5 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
-
-
 
 end.

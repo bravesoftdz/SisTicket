@@ -1,13 +1,11 @@
 inherited FrmFuncionarios: TFrmFuncionarios
   Caption = 'Funcionarios'
-  ClientHeight = 604
+  ClientHeight = 577
   ClientWidth = 733
   Font.Color = clBlack
-  Position = poDesigned
   OnActivate = FormActivate
-  ExplicitTop = -54
   ExplicitWidth = 739
-  ExplicitHeight = 633
+  ExplicitHeight = 606
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar1: TToolBar
@@ -17,9 +15,9 @@ inherited FrmFuncionarios: TFrmFuncionarios
     ExplicitWidth = 733
   end
   inherited StatusBar1: TStatusBar
-    Top = 585
+    Top = 558
     Width = 733
-    ExplicitTop = 567
+    ExplicitTop = 558
     ExplicitWidth = 733
   end
   inherited PanelEntrada: TPanel
@@ -34,7 +32,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
   inherited PnlFicha: TPanel
     Top = 123
     Width = 733
-    Height = 462
+    Height = 435
     ExplicitTop = 123
     ExplicitWidth = 733
     ExplicitHeight = 435
@@ -56,7 +54,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
       Left = 78
       Top = 40
       Width = 563
-      Height = 265
+      Height = 257
       Caption = 'Dados Pessoais'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -108,7 +106,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
         Caption = 'Departamento'
       end
       object SpeedButton1: TSpeedButton
-        Left = 311
+        Left = 322
         Top = 219
         Width = 23
         Height = 22
@@ -127,13 +125,6 @@ inherited FrmFuncionarios: TFrmFuncionarios
         Width = 49
         Height = 14
         Caption = 'Telefone'
-      end
-      object Label12: TLabel
-        Left = 355
-        Top = 221
-        Width = 31
-        Height = 14
-        Caption = 'Cargo'
       end
       object DBEdit1: TDBEdit
         Left = 138
@@ -174,7 +165,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
       object DBEdit5: TDBEdit
         Left = 395
         Top = 141
-        Width = 128
+        Width = 129
         Height = 22
         DataField = 'ramal'
         DataSource = DataSource1
@@ -192,7 +183,7 @@ inherited FrmFuncionarios: TFrmFuncionarios
       object DBLookupComboBox1: TDBLookupComboBox
         Left = 138
         Top = 219
-        Width = 159
+        Width = 178
         Height = 22
         DataField = 'id_departamento'
         DataSource = DataSource1
@@ -200,15 +191,6 @@ inherited FrmFuncionarios: TFrmFuncionarios
         ListField = 'descricao'
         ListSource = DSDepto
         TabOrder = 6
-      end
-      object DBEdit11: TDBEdit
-        Left = 402
-        Top = 218
-        Width = 121
-        Height = 22
-        DataField = 'cargo'
-        DataSource = DataSource1
-        TabOrder = 7
       end
     end
     object DBEdit7: TDBEdit
@@ -229,185 +211,6 @@ inherited FrmFuncionarios: TFrmFuncionarios
       DataSource = DataSource1
       TabOrder = 1
     end
-    object GroupBox2: TGroupBox
-      Left = 78
-      Top = 322
-      Width = 563
-      Height = 127
-      Caption = 'Informa'#231#245'es de Login'
-      TabOrder = 3
-      object Label10: TLabel
-        Left = 100
-        Top = 50
-        Width = 30
-        Height = 13
-        Caption = 'Senha'
-      end
-      object Label9: TLabel
-        Left = 94
-        Top = 22
-        Width = 36
-        Height = 13
-        Caption = 'Usu'#225'rio'
-      end
-      object Label11: TLabel
-        Left = 57
-        Top = 77
-        Width = 73
-        Height = 13
-        Caption = 'Repita a Senha'
-      end
-      object ImgOk: TImage
-        Left = 322
-        Top = 75
-        Width = 23
-        Height = 20
-        Picture.Data = {
-          055449636F6E0000010001001010000001002000680400001600000028000000
-          10000000200000000100200000000000000400006E0400006E04000000000000
-          00000000FFFFFF00FFFFFF00FFFFFF00FFFFFF0086AE282687AD268087AE25B3
-          88AE25E688AE25E687AE25B387AD268086AE2826FFFFFF00FFFFFF00FFFFFF00
-          FFFFFF00FFFFFF00FFFFFF00FFFF000189AD247088AE25F688AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25F689AD2470FFFF0001FFFFFF00
-          FFFFFF00FFFFFF00FFFF000189AF25B588AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF89AF25B5FFFF0001
-          FFFFFF00FFFFFF0089AD247088AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF89AD2470
-          FFFFFF0086AE282688AE25F688AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25F6
-          86AE282687AD268088AE25FF88AE25FF88AE25FF88AE25FF89AF28FFC6D896FF
-          C2D58FFF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          89AF247F87AE25B388AE25FF88AE25FF88AE25FF91B435FFD7E4B6FFAAC563FF
-          BDD286FFB9D080FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          87AE25B388AE25E688AE25FF88AE25FF96B840FFDCE7BEFF99B944FF88AE25FF
-          88AE25FFC9DA9DFFADC769FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25E688AE25E688AE25FF88AE25FF8AAF28FF8DB12EFF88AE25FF88AE25FF
-          88AE25FF88AE26FFD3E1AEFFA3C056FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25E687AE25B388AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF8BB02BFFD9E5B9FF9ABA46FF88AE25FF88AE25FF88AE25FF
-          87AE25B387AD268088AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF8FB333FFDCE7BEFF93B539FF88AE25FF88AE25FF
-          89AF247F86AE282688AE25F688AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF95B73CFF90B334FF88AE25FF88AE25F6
-          86AE2826FFFFFF0089AD247088AE25FF88AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF89AD2470
-          FFFFFF00FFFFFF00FFFF000189AF25B588AE25FF88AE25FF88AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF88AE25FF89AF25B5FFFF0001
-          FFFFFF00FFFFFF00FFFFFF00FFFF000189AD247088AE25F688AE25FF88AE25FF
-          88AE25FF88AE25FF88AE25FF88AE25FF88AE25F689AD2470FFFF0001FFFFFF00
-          FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0086AE282687AD268087AE25B3
-          88AE25E688AE25E687AE25B387AD268086AE2826FFFFFF00FFFFFF00FFFFFF00
-          FFFFFF00F00F0000C00300008001000080010000000000000000000000000000
-          00000000000000000000000000000000000000008001000080010000C0030000
-          F00F0000}
-        Visible = False
-      end
-      object ImgErro: TImage
-        Left = 322
-        Top = 75
-        Width = 23
-        Height = 20
-        Picture.Data = {
-          055449636F6E0000010001001010000001002000680400001600000028000000
-          10000000200000000100200000000000000400006E0400006E04000000000000
-          00000000FFFFFF00FFFFFF00FFFFFF00FFFFFF004A57D7264A5AD7804A5AD7B3
-          4A5AD7E64A5AD7E64A5AD7B34A5AD7804A57D726FFFFFF00FFFFFF00FFFFFF00
-          FFFFFF00FFFFFF00FFFFFF000000FF014B5BD6704A5AD7F64A5AD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7F64B5BD6700000FF01FFFFFF00
-          FFFFFF00FFFFFF000000FF014B5AD8B54A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4B5AD8B50000FF01
-          FFFFFF00FFFFFF004B5BD6704A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4B5BD670
-          FFFFFF004A57D7264A5AD7F64A5AD7FF4A5AD7FF4A5AD7FF4B5BD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4B5BD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7F6
-          4A57D7264A5AD7804A5AD7FF4A5AD7FF4A5AD7FF4B5BD7FFC1C6F1FF5B6ADBFF
-          4A5AD7FF4A5AD7FF5B6ADBFFC1C6F1FF4B5BD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD77F4A5AD7B34A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF5B6ADBFFC6CBF2FF
-          5B6ADBFF5B6ADBFFC6CBF2FF5B6ADBFF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7B34A5AD7E64A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF5B6ADBFF
-          CBD0F3FFCCD0F4FF5B6ADBFF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7E64A5AD7E64A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF5B6ADBFF
-          CCD0F4FFCBD0F3FF5B6ADBFF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7E64A5AD7B34A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF5B6ADBFFC6CBF2FF
-          5B6ADBFF5B6ADBFFC6CBF2FF5B6ADBFF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7B34A5AD7804A5AD7FF4A5AD7FF4A5AD7FF4B5BD7FFC1C6F1FF5B6ADBFF
-          4A5AD7FF4A5AD7FF5B6ADBFFC1C6F1FF4B5BD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD77F4A57D7264A5AD7F64A5AD7FF4A5AD7FF4A5AD7FF4B5BD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4B5BD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7F6
-          4A57D726FFFFFF004B5BD6704A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4B5BD670
-          FFFFFF00FFFFFF000000FF014B5AD8B54A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4B5AD8B50000FF01
-          FFFFFF00FFFFFF00FFFFFF000000FF014B5BD6704A5AD7F64A5AD7FF4A5AD7FF
-          4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7FF4A5AD7F64B5BD6700000FF01FFFFFF00
-          FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004A57D7264A5AD7804A5AD7B3
-          4A5AD7E64A5AD7E64A5AD7B34A5AD7804A57D726FFFFFF00FFFFFF00FFFFFF00
-          FFFFFF00F00F0000C00300008001000080010000000000000000000000000000
-          00000000000000000000000000000000000000008001000080010000C0030000
-          F00F0000}
-        Visible = False
-      end
-      object Label13: TLabel
-        Left = 138
-        Top = 104
-        Width = 174
-        Height = 16
-        Caption = 'Verifique a senha digitada!'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -13
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Visible = False
-      end
-      object DBEdit10: TDBEdit
-        Left = 136
-        Top = 50
-        Width = 180
-        Height = 21
-        DataField = 'senha'
-        DataSource = DataSource1
-        PasswordChar = '*'
-        TabOrder = 1
-      end
-      object DBEdit9: TDBEdit
-        Left = 136
-        Top = 18
-        Width = 180
-        Height = 21
-        DataField = 'usuario'
-        DataSource = DataSource1
-        TabOrder = 0
-      end
-      object EdtSenhaConfirma: TEdit
-        Left = 136
-        Top = 77
-        Width = 180
-        Height = 21
-        BiDiMode = bdLeftToRight
-        ParentBiDiMode = False
-        PasswordChar = '*'
-        TabOrder = 2
-        OnExit = EdtSenhaConfirmaExit
-      end
-    end
-    object DBRadioGroup1: TDBRadioGroup
-      Left = 503
-      Top = 344
-      Width = 114
-      Height = 81
-      Caption = 'N'#237'vel de Acesso'
-      DataField = 'fk_id_nivel'
-      DataSource = DataSource1
-      Items.Strings = (
-        'Analista'
-        'Usu'#225'rio')
-      TabOrder = 4
-      Values.Strings = (
-        '1'
-        '2')
-    end
   end
   object Panel1: TPanel [4]
     Left = 0
@@ -427,10 +230,10 @@ inherited FrmFuncionarios: TFrmFuncionarios
     TabOrder = 4
   end
   inherited ImageList1: TImageList
-    Left = 280
-    Top = 152
+    Left = 16
+    Top = 520
     Bitmap = {
-      494C01010D0018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1626,10 +1429,10 @@ inherited FrmFuncionarios: TFrmFuncionarios
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 320
-    Top = 152
+    Left = 56
+    Top = 520
     Bitmap = {
-      494C01010D0018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2825,10 +2628,10 @@ inherited FrmFuncionarios: TFrmFuncionarios
       000000000000}
   end
   inherited ImageList3: TImageList
-    Left = 376
-    Top = 153
+    Left = 112
+    Top = 521
     Bitmap = {
-      494C01010D0018003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800380018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B
@@ -4027,8 +3830,8 @@ inherited FrmFuncionarios: TFrmFuncionarios
     IndexFieldNames = 'id'
     UpdateOptions.UpdateTableName = 'ticket.dbo.funcionario'
     TableName = 'ticket.dbo.funcionario'
-    Left = 440
-    Top = 152
+    Left = 176
+    Top = 520
     object FDTabelaid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -4083,40 +3886,21 @@ inherited FrmFuncionarios: TFrmFuncionarios
       FieldName = 'data_alt'
       Origin = 'data_alt'
     end
-    object FDTabelacargo: TStringField
-      FieldName = 'cargo'
-      Origin = 'cargo'
-      Size = 50
-    end
-    object FDTabelausuario: TStringField
-      FieldName = 'usuario'
-      Origin = 'usuario'
-      Size = 50
-    end
-    object FDTabelasenha: TStringField
-      FieldName = 'senha'
-      Origin = 'senha'
-      Size = 50
-    end
-    object FDTabelafk_id_nivel: TIntegerField
-      FieldName = 'fk_id_nivel'
-      Origin = 'fk_id_nivel'
-    end
   end
   inherited DataSource1: TDataSource
-    Left = 496
-    Top = 152
+    Left = 232
+    Top = 520
   end
   object FDQryDepto: TFDQuery
     Connection = DM.FDConnection1
     SQL.Strings = (
       'SELECT * FROM ticket.dbo.departamento ORDER BY descricao')
-    Left = 576
-    Top = 151
+    Left = 312
+    Top = 519
   end
   object DSDepto: TDataSource
     DataSet = FDQryDepto
-    Left = 648
-    Top = 151
+    Left = 384
+    Top = 519
   end
 end

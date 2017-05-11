@@ -104,7 +104,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Left = 224
     Top = 272
     Bitmap = {
-      494C010105001800200140004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101050018001C0140004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000000100008000000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -4437,9 +4437,9 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   object QueryLogin: TFDQuery
     Connection = DM.FDConnection1
     SQL.Strings = (
-      'select f.usuario, n.nivel_descricao'
-      'from funcionario f inner join nivel n'
-      'on f.fk_id_nivel = n.id_nivel')
+      'select u.*, p.*'
+      'from usuario u inner join perfil p'
+      'on u.usu_id_perfil = p.id')
     Left = 432
     Top = 272
   end
