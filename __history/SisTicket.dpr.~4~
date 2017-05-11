@@ -15,9 +15,7 @@ uses
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
   Vcl.Themes,
   Vcl.Styles,
-  UntLogin in 'UntLogin.pas' {FrmLogin},
-  UntRelatorioPadrao in 'UntRelatorioPadrao.pas' {FrmRelatorioPadrao},
-  UntRelatorioFuncionario in 'UntRelatorioFuncionario.pas' {FrmRelatorioFuncionario};
+  UntLogin in 'UntLogin.pas' {FrmLogin};
 
 uses
   Vcl.Forms,
@@ -57,8 +55,6 @@ begin
   Application.CreateForm(TFrmListaChamados, FrmListaChamados);
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
   Application.CreateForm(TFrmLogin, FrmLogin);
-  Application.CreateForm(TFrmRelatorioPadrao, FrmRelatorioPadrao);
-  Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
   <<<<<<< HEAD
   Application.CreateForm(TFrmLogin, FrmLogin);
 =======

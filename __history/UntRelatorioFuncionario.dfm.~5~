@@ -1,0 +1,136 @@
+inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
+  Caption = 'Sisticket - Relat'#243'rio de Funcion'#225'rios'
+  ClientHeight = 473
+  ClientWidth = 513
+  ExplicitWidth = 519
+  ExplicitHeight = 501
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 513
+    ExplicitLeft = 0
+    ExplicitTop = 0
+    ExplicitWidth = 347
+    inherited Label1: TLabel
+      Width = 59
+      ExplicitWidth = 59
+    end
+  end
+  inherited BitBtn1: TBitBtn
+    Left = 336
+    Top = 352
+    ExplicitLeft = 336
+    ExplicitTop = 352
+  end
+  inherited BitBtn2: TBitBtn
+    Left = 417
+    Top = 352
+    ExplicitLeft = 417
+    ExplicitTop = 352
+  end
+  inherited StatusBar1: TStatusBar
+    Top = 454
+    Width = 513
+    ExplicitLeft = 0
+    ExplicitTop = 245
+    ExplicitWidth = 347
+  end
+  object EdtCodigoDe: TLabeledEdit [4]
+    Left = 104
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 52
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo de:'
+    LabelPosition = lpLeft
+    TabOrder = 4
+  end
+  object EdtCodigoAte: TLabeledEdit [5]
+    Left = 336
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 56
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo ate:'
+    LabelPosition = lpLeft
+    TabOrder = 5
+  end
+  object EdtNomeDe: TLabeledEdit [6]
+    Left = 104
+    Top = 120
+    Width = 377
+    Height = 21
+    EditLabel.Width = 46
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome de:'
+    LabelPosition = lpLeft
+    TabOrder = 6
+  end
+  object EdtNomeAte: TLabeledEdit [7]
+    Left = 104
+    Top = 160
+    Width = 377
+    Height = 21
+    EditLabel.Width = 50
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome at'#233':'
+    LabelPosition = lpLeft
+    TabOrder = 7
+  end
+  object EdtDepto: TLabeledEdit [8]
+    Left = 102
+    Top = 194
+    Width = 147
+    Height = 21
+    EditLabel.Width = 69
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Departamento'
+    LabelPosition = lpLeft
+    TabOrder = 8
+  end
+  object RadioGroup1: TRadioGroup [9]
+    Left = 104
+    Top = 221
+    Width = 377
+    Height = 84
+    Caption = 'Ordenar'
+    Columns = 3
+    Items.Strings = (
+      'C'#243'digo'
+      'Nome'
+      'Departamento')
+    TabOrder = 9
+  end
+  inherited FDQuery1: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM funcionario')
+    Left = 32
+    Top = 368
+  end
+  inherited frxDBDataset1: TfrxDBDataset
+    Left = 96
+    Top = 368
+  end
+  inherited frxReport1: TfrxReport
+    Left = 168
+    Top = 368
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+    end
+  end
+end

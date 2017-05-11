@@ -1,0 +1,324 @@
+inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
+  Caption = 'Sisticket - Relat'#243'rio de Funcion'#225'rios'
+  ClientHeight = 473
+  ClientWidth = 513
+  ExplicitWidth = 519
+  ExplicitHeight = 501
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 513
+    ExplicitWidth = 513
+  end
+  inherited BitBtn1: TBitBtn
+    Left = 336
+    Top = 352
+    ExplicitLeft = 336
+    ExplicitTop = 352
+  end
+  inherited BitBtn2: TBitBtn
+    Left = 417
+    Top = 352
+    ExplicitLeft = 417
+    ExplicitTop = 352
+  end
+  object EdtDepto: TLabeledEdit [3]
+    Left = 102
+    Top = 194
+    Width = 147
+    Height = 21
+    EditLabel.Width = 69
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Departamento'
+    LabelPosition = lpLeft
+    TabOrder = 8
+  end
+  object RadioGroup1: TRadioGroup [4]
+    Left = 104
+    Top = 221
+    Width = 377
+    Height = 84
+    Caption = 'Ordenar'
+    Columns = 3
+    Items.Strings = (
+      'C'#243'digo'
+      'Nome'
+      'Departamento')
+    TabOrder = 9
+  end
+  object EdtNomeAte: TLabeledEdit [5]
+    Left = 104
+    Top = 160
+    Width = 377
+    Height = 21
+    EditLabel.Width = 50
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome at'#233':'
+    LabelPosition = lpLeft
+    TabOrder = 7
+  end
+  object EdtNomeDe: TLabeledEdit [6]
+    Left = 104
+    Top = 120
+    Width = 377
+    Height = 21
+    EditLabel.Width = 46
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome de:'
+    LabelPosition = lpLeft
+    TabOrder = 6
+  end
+  object EdtCodigoAte: TLabeledEdit [7]
+    Left = 336
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 56
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo ate:'
+    LabelPosition = lpLeft
+    TabOrder = 5
+  end
+  object EdtCodigoDe: TLabeledEdit [8]
+    Left = 104
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 52
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo de:'
+    LabelPosition = lpLeft
+    TabOrder = 4
+  end
+  inherited StatusBar1: TStatusBar
+    Top = 454
+    Width = 513
+    ExplicitTop = 454
+    ExplicitWidth = 513
+  end
+  inherited FDQuery1: TFDQuery
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM funcionario')
+    Left = 32
+    Top = 368
+  end
+  inherited frxDBDataset1: TfrxDBDataset
+    Left = 96
+    Top = 368
+  end
+  inherited frxReport1: TfrxReport
+    ReportOptions.LastChange = 42865.976471585700000000
+    Left = 168
+    Top = 368
+    Datasets = <
+      item
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+      end>
+    Variables = <>
+    Style = <>
+    inherited Page1: TfrxReportPage
+      inherited MasterData1: TfrxMasterData
+        Height = 30.236240000000000000
+        Top = 200.315090000000000000
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+        object Memo6: TfrxMemoView
+          Width = 721.890230000000000000
+          Height = 18.897650000000000000
+          Highlight.Font.Charset = DEFAULT_CHARSET
+          Highlight.Font.Color = clRed
+          Highlight.Font.Height = -13
+          Highlight.Font.Name = 'Arial'
+          Highlight.Font.Style = []
+          Highlight.Condition = '<line> mod 2 = 0 '
+          Highlight.FillType = ftBrush
+          Highlight.Fill.BackColor = 13421772
+        end
+        object frxDBDataset1nome: TfrxMemoView
+          Left = 56.692950000000000000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          DataField = 'nome'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."nome"]')
+        end
+        object frxDBDataset1id: TfrxMemoView
+          Left = 7.559060000000000000
+          Width = 41.574830000000000000
+          Height = 18.897650000000000000
+          DataField = 'id'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."id"]')
+        end
+        object frxDBDataset1cargo: TfrxMemoView
+          Left = 139.842610000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          DataField = 'cargo'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."cargo"]')
+        end
+        object frxDBDataset1telefone: TfrxMemoView
+          Left = 260.787570000000000000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          DataField = 'telefone'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."telefone"]')
+        end
+        object frxDBDataset1ramal: TfrxMemoView
+          Left = 343.937230000000000000
+          Width = 56.692950000000000000
+          Height = 18.897650000000000000
+          DataField = 'ramal'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."ramal"]')
+        end
+        object frxDBDataset1celular: TfrxMemoView
+          Left = 400.630180000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'celular'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."celular"]')
+        end
+        object frxDBDataset1email: TfrxMemoView
+          Left = 510.236550000000000000
+          Width = 192.756030000000000000
+          Height = 18.897650000000000000
+          DataField = 'email'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."email"]')
+        end
+      end
+      inherited PageFooter1: TfrxPageFooter
+        Top = 291.023810000000000000
+        inherited Memo1: TfrxMemoView
+          Memo.UTF8W = (
+            'P'#225'gina [Page#] de [TotalPages#]')
+        end
+        inherited Memo2: TfrxMemoView
+          Memo.UTF8W = (
+            '[Date] - [Time]')
+        end
+      end
+      inherited PageHeader1: TfrxPageHeader
+        Height = 75.590600000000000000
+        inherited Memo3: TfrxMemoView
+          Memo.UTF8W = (
+            'Sisticket - Sistema de Chamados de T.I')
+        end
+        inherited Memo4: TfrxMemoView
+          Memo.UTF8W = (
+            'www.sisticket.com.br')
+        end
+        inherited Memo5: TfrxMemoView
+          Memo.UTF8W = (
+            'Relat'#243'rio')
+        end
+      end
+      object ColumnHeader1: TfrxColumnHeader
+        FillType = ftBrush
+        Height = 22.677180000000000000
+        Top = 117.165430000000000000
+        Width = 718.110700000000000000
+        object Memo7: TfrxMemoView
+          Left = -3.779530000000000000
+          Top = 3.779530000000000000
+          Width = 49.133890000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'C'#243'digo')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          Left = 52.913420000000000000
+          Top = 3.779530000000000000
+          Width = 86.929190000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Nome')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          Left = 158.740260000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Cargo')
+          ParentFont = False
+        end
+        object Memo10: TfrxMemoView
+          Left = 287.244280000000000000
+          Width = 113.385900000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Telefone')
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          Left = 404.409710000000000000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Celular')
+          ParentFont = False
+        end
+        object Memo12: TfrxMemoView
+          Left = 551.811380000000000000
+          Width = 41.574830000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Email')
+          ParentFont = False
+        end
+      end
+    end
+  end
+end

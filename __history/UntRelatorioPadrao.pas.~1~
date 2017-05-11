@@ -1,0 +1,24 @@
+unit UntRelatorioPadrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFrmRelatorioPadrao = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmRelatorioPadrao: TFrmRelatorioPadrao;
+
+implementation
+
+{$R *.dfm}
+
+end.
