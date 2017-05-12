@@ -547,21 +547,13 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-<<<<<<< HEAD
-                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
-=======
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
->>>>>>> ccfa965c4419a2706e422df63cd037871560e663
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
-<<<<<<< HEAD
-                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
-=======
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
->>>>>>> ccfa965c4419a2706e422df63cd037871560e663
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>

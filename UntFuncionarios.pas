@@ -68,6 +68,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure EdtSenhaConfirmaExit(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
+    procedure EdtSenhaConfirmaEnter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -89,12 +90,20 @@ uses UntDM, UntDepartamento;
 
 procedure TFrmFuncionarios.btn_salvarClick(Sender: TObject);
 begin
-    if (EdtSenhaConfirma.Text<> '') and (DBEdit9.Text<>'') and (DBEdit10.Text <> '') and (DBEdit1.Text <> '')and (DBEdit2.Text <> '') and (DBEdit3.Text <> '') and (DBEdit4.Text <> '') and (DBEdit11.Text <> '') then
+    if (DBEdit9.Text='') or (DBEdit10.Text = '') or (DBEdit1.Text = '') or (DBEdit2.Text = '') or (DBEdit3.Text = '')
+    and (DBEdit4.Text = '') or (DBEdit11.Text = '') then
     showmessage ('Verifique as informações!')
     else
-
   inherited;
 
+end;
+
+procedure TFrmFuncionarios.EdtSenhaConfirmaEnter(Sender: TObject);
+begin
+  inherited;
+          ImgOk.Visible := False;
+          ImgErro.Visible := False;
+          label13.Visible := False;
 end;
 
 procedure TFrmFuncionarios.EdtSenhaConfirmaExit(Sender: TObject);

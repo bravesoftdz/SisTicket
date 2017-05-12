@@ -1661,6 +1661,7 @@ object FrmLogin: TFrmLogin
         25B388AE25E688AE25E687AE25B387AD268086AE2826FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00}
       Transparent = False
+      OnClick = spbOkClick
     end
     object spbCancelar: TSpeedButton
       Left = 328
@@ -1726,6 +1727,7 @@ object FrmLogin: TFrmLogin
       Height = 21
       CharCase = ecLowerCase
       TabOrder = 1
+      OnChange = EdtNomeChange
     end
   end
 end
