@@ -35,7 +35,6 @@ type
     DBEdit3: TDBEdit;
     DBGrid1: TDBGrid;
     DBLookupComboBox1: TDBLookupComboBox;
-    GroupBox2: TGroupBox;
     Label10: TLabel;
     SpeedButton3: TSpeedButton;
     SpeedButton4: TSpeedButton;
@@ -54,6 +53,9 @@ type
     DSHistoricoChamado: TDataSource;
     FDTblTipoMotivo: TFDTable;
     DSTipoMotivo: TDataSource;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    Histórico: TTabSheet;
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }

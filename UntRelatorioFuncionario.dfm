@@ -2,41 +2,49 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
   Caption = 'Sisticket - Relat'#243'rio de Funcion'#225'rios'
   ClientHeight = 473
   ClientWidth = 513
+  ExplicitTop = -70
   ExplicitWidth = 519
-  ExplicitHeight = 501
+  ExplicitHeight = 502
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 513
     ExplicitWidth = 513
   end
-  inherited BitBtn1: TBitBtn
-    Left = 336
-    Top = 352
-    ExplicitLeft = 336
-    ExplicitTop = 352
-  end
-  object EdtDepto: TLabeledEdit [2]
-    Left = 102
-    Top = 194
-    Width = 147
-    Height = 21
-    EditLabel.Width = 69
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Departamento'
-    LabelPosition = lpLeft
-    TabOrder = 8
-  end
-  object EdtCodigoDe: TLabeledEdit [3]
+  object EdtNomeAte: TLabeledEdit [1]
     Left = 104
-    Top = 72
-    Width = 145
+    Top = 160
+    Width = 377
     Height = 21
-    EditLabel.Width = 52
+    EditLabel.Width = 50
     EditLabel.Height = 13
-    EditLabel.Caption = 'C'#243'digo de:'
+    EditLabel.Caption = 'Nome at'#233':'
     LabelPosition = lpLeft
-    TabOrder = 4
+    TabOrder = 7
+  end
+  object RadioGroup1: TRadioGroup [2]
+    Left = 104
+    Top = 221
+    Width = 377
+    Height = 84
+    Caption = 'Ordenar'
+    Columns = 3
+    Items.Strings = (
+      'C'#243'digo'
+      'Nome'
+      'Departamento')
+    TabOrder = 9
+  end
+  object EdtNomeDe: TLabeledEdit [3]
+    Left = 104
+    Top = 120
+    Width = 377
+    Height = 21
+    EditLabel.Width = 46
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome de:'
+    LabelPosition = lpLeft
+    TabOrder = 6
   end
   object EdtCodigoAte: TLabeledEdit [4]
     Left = 336
@@ -49,40 +57,33 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
     LabelPosition = lpLeft
     TabOrder = 5
   end
-  object EdtNomeDe: TLabeledEdit [5]
+  object EdtCodigoDe: TLabeledEdit [5]
     Left = 104
-    Top = 120
-    Width = 377
+    Top = 72
+    Width = 145
     Height = 21
-    EditLabel.Width = 46
+    EditLabel.Width = 52
     EditLabel.Height = 13
-    EditLabel.Caption = 'Nome de:'
+    EditLabel.Caption = 'C'#243'digo de:'
     LabelPosition = lpLeft
-    TabOrder = 6
+    TabOrder = 4
   end
-  object EdtNomeAte: TLabeledEdit [6]
-    Left = 104
-    Top = 160
-    Width = 377
+  object EdtDepto: TLabeledEdit [6]
+    Left = 102
+    Top = 194
+    Width = 147
     Height = 21
-    EditLabel.Width = 50
+    EditLabel.Width = 69
     EditLabel.Height = 13
-    EditLabel.Caption = 'Nome at'#233':'
+    EditLabel.Caption = 'Departamento'
     LabelPosition = lpLeft
-    TabOrder = 7
+    TabOrder = 8
   end
-  object RadioGroup1: TRadioGroup [7]
-    Left = 104
-    Top = 221
-    Width = 377
-    Height = 84
-    Caption = 'Ordenar'
-    Columns = 3
-    Items.Strings = (
-      'C'#243'digo'
-      'Nome'
-      'Departamento')
-    TabOrder = 9
+  inherited BitBtn1: TBitBtn
+    Left = 336
+    Top = 352
+    ExplicitLeft = 336
+    ExplicitTop = 352
   end
   inherited BitBtn2: TBitBtn
     Left = 417

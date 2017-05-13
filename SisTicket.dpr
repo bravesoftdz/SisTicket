@@ -19,11 +19,6 @@ uses
   Vcl.Themes,
   Vcl.Styles;
 
-
-
-
-
-
 {$R *.res}
 
 begin
@@ -42,7 +37,7 @@ begin
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmRelatorioPadrao, FrmRelatorioPadrao);
-  Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
+  //Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.Run;
 end.
