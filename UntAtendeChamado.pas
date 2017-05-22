@@ -38,7 +38,6 @@ type
     Label10: TLabel;
     SpeedButton3: TSpeedButton;
     SpeedButton4: TSpeedButton;
-    DBMemo2: TDBMemo;
     DBGrid2: TDBGrid;
     Label11: TLabel;
     DBLookupComboBox3: TDBLookupComboBox;
@@ -49,14 +48,21 @@ type
     FDTblStatusdescricao: TStringField;
     FDQryFuncionarioXChamado: TFDQuery;
     DSFuncionarioxChamado: TDataSource;
-    FDQryHistoricoChamado: TFDQuery;
-    DSHistoricoChamado: TDataSource;
     FDTblTipoMotivo: TFDTable;
     DSTipoMotivo: TDataSource;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     Histórico: TTabSheet;
+    Label12: TLabel;
+    DBEdit6: TDBEdit;
+    FDTblTipoMotivoid: TFDAutoIncField;
+    FDTblTipoMotivodescricao: TStringField;
+    FDQryHistorico: TFDQuery;
+    DSHistorico: TDataSource;
+    Label13: TLabel;
+    Memo1: TMemo;
     procedure FormActivate(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,7 +76,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntDM, UntListaChamados;
+uses UntDM, UntListaChamados, UntLogin;
 
 procedure TFrmAtendeChamado.FormActivate(Sender: TObject);
 begin
@@ -80,6 +86,35 @@ begin
 
   FDTblStatus.Close;
   FDTblStatus.Open();
+end;
+
+procedure TFrmAtendeChamado.SpeedButton4Click(Sender: TObject);
+var
+  StrSql: String;
+  logado: Integer;
+begin
+  inherited;
+  if Memo1.Text = '' then
+  begin
+    Label3.Font.Color := clRed;
+    Label3.Caption := 'Digite a descrição do histórico.';
+    Memo1.SetFocus;
+
+  end
+  else
+  begin
+  //Não terminado
+  {logado := FrmLogin.i
+    StrSql:= 'INSERT INTO historico (data, descricao, id_chamado, id_funcionario) VALUES (NOW(), '+#39+Memo1.Text+#39+', 1, '+id_funcio_logado+' )';
+
+    FDQryHistorico.Close;
+    FDQryHistorico.SQL.Clear;
+    FDQryHistorico.SQL.Add(StrSql);
+    FDQryHistorico.Open;   }
+  end;
+
+
+
 end;
 
 end.

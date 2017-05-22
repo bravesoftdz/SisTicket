@@ -51,7 +51,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntPadrao1, UntFuncionarios, UntChamado, UntListaChamados, UntDM;
+uses UntPadrao1, UntFuncionarios, UntChamado, UntListaChamados, UntDM, UntLogin;
 
 procedure TFrmMenuPrincipal.ChamadosExecute(Sender: TObject);
 begin
@@ -72,6 +72,7 @@ begin
  end
   else
   showmessage('Conecte-se a Internet antes de utilizar o sistema de chamados.');
+  FrmListaChamados.ShowModal;
 end;
 
 
@@ -81,10 +82,11 @@ procedure TFrmMenuPrincipal.cad_ChamadoExecute(Sender: TObject);
 begin
  if conexao = true then
  begin
-   Frmchamado.ShowModal;
+   FrmChamado.ShowModal;
  end
   else
   showmessage('Conecte-se a Internet antes de utilizar o sistema de chamados.');
+  FrmChamado.ShowModal;
 end;
 
 
@@ -105,14 +107,16 @@ var i:dword;
 begin
   conexao := false;
   WindowState:= wsMaximized;
-  StatusBar1.Panels[1].Text:= FormatDateTime(' dddd ", " dd " de " mmmm " de "yyyy', Now);
-  if InternetGetConnectedState(@i,0)   then
+  StatusBar1.Panels[1].Text:= FormatDateTime('dddd ", " dd " de " mmmm " de "yyyy', Now);
+  if InternetGetConnectedState(@i,0) then
    begin
-    StatusBar1.Panels[3].Text:= 'Conectado!';
+    StatusBar1.Panels[4].Text:= 'Conectado!';
     conexao := true
    end
-    else
-      StatusBar1.Panels[3].Text:= 'Não Conectado, verifique sua conexão!';
+   else
+     StatusBar1.Panels[4].Text:= 'Não Conectado, verifique sua conexão!';
+
+  FrmLogin.ShowModal;
 end;
 
 

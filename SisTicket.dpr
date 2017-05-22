@@ -10,14 +10,15 @@ uses
   UntFuncionarios in 'UntFuncionarios.pas' {FrmFuncionarios},
   UntPadraoSimples in 'UntPadraoSimples.pas' {FrmPadraoSimples},
   UntDepartamento in 'UntDepartamento.pas' {FrmDepartamento},
-  UntChamado in 'UntChamado.pas' {Frmchamado},
+  UntChamado in 'UntChamado.pas' {FrmChamado},
   UntListaChamados in 'UntListaChamados.pas' {FrmListaChamados},
   UntAtendeChamado in 'UntAtendeChamado.pas' {FrmAtendeChamado},
   UntLogin in 'UntLogin.pas' {FrmLogin},
   UntRelatorioPadrao in 'UntRelatorioPadrao.pas' {FrmRelatorioPadrao},
   UntRelatorioFuncionario in 'UntRelatorioFuncionario.pas' {FrmRelatorioFuncionario},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  UntCadPerfil in 'UntCadPerfil.pas' {FrmCadPerfil};
 
 {$R *.res}
 
@@ -32,11 +33,12 @@ begin
   Application.CreateForm(TFrmDepartamento, FrmDepartamento);
   Application.CreateForm(TFrmCadSimples, FrmCadSimples);
   Application.CreateForm(TFrmCadDepartamento, FrmCadDepartamento);
-  Application.CreateForm(TFrmchamado, Frmchamado);
+  Application.CreateForm(TFrmChamado, FrmChamado);
   Application.CreateForm(TFrmListaChamados, FrmListaChamados);
   Application.CreateForm(TFrmAtendeChamado, FrmAtendeChamado);
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmRelatorioPadrao, FrmRelatorioPadrao);
+  Application.CreateForm(TFrmCadPerfil, FrmCadPerfil);
   //Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.Run;

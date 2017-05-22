@@ -14,6 +14,7 @@ object FrmLogin: TFrmLogin
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -1569,9 +1570,9 @@ object FrmLogin: TFrmLogin
     Height = 65
     Align = alTop
     Caption = 'SisTicket - Login'
-    Color = clMoneyGreen
+    Color = clSkyBlue
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -27
     Font.Name = 'Calibri'
     Font.Style = [fsBold]
@@ -1619,9 +1620,9 @@ object FrmLogin: TFrmLogin
       ParentFont = False
     end
     object spbOk: TSpeedButton
-      Left = 220
+      Left = 172
       Top = 113
-      Width = 89
+      Width = 101
       Height = 25
       Caption = '&Login'
       Glyph.Data = {
@@ -1711,6 +1712,20 @@ object FrmLogin: TFrmLogin
         D7B34A5AD7E64A5AD7E64A5AD7B34A5AD7804A57D726FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00}
       ParentFont = False
+      OnClick = spbCancelarClick
+    end
+    object lblStatusLogin: TLabel
+      Left = 120
+      Top = 146
+      Width = 513
+      Height = 19
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
     end
     object EdtSenha: TEdit
       Left = 220
@@ -1727,7 +1742,6 @@ object FrmLogin: TFrmLogin
       Height = 21
       CharCase = ecLowerCase
       TabOrder = 1
-      OnChange = EdtNomeChange
     end
   end
 end

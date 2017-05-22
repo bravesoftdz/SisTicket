@@ -12,7 +12,7 @@ uses
   Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask;
 
 type
-  TFrmchamado = class(TFrmPadrao1)
+  TFrmChamado = class(TFrmPadrao1)
     Label2: TLabel;
     DBEdit1: TDBEdit;
     Label3: TLabel;
@@ -44,7 +44,7 @@ type
   end;
 
 var
-  Frmchamado: TFrmchamado;
+  FrmChamado: TFrmChamado;
 
 implementation
 
@@ -52,7 +52,7 @@ implementation
 
 uses UntDM;
 
-procedure TFrmchamado.FormActivate(Sender: TObject);
+procedure TFrmChamado.FormActivate(Sender: TObject);
 begin
   inherited;
   FDTabela.Close;

@@ -12,6 +12,7 @@ object DM: TDM
       'DATABASE=ticket'
       'DriverID=MSSQL')
     Connected = True
+    LoginPrompt = False
     Left = 32
     Top = 8
   end

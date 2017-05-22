@@ -18,8 +18,12 @@ type
     Image1: TImage;
     spbOk: TSpeedButton;
     spbCancelar: TSpeedButton;
-    procedure EdtNomeChange(Sender: TObject);
+    lblStatusLogin: TLabel;
+    procedure spbCancelarClick(Sender: TObject);
     procedure spbOkClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    {procedure EdtNomeChange(Sender: TObject);
+    procedure spbOkClick(Sender: TObject);  }
   private
     { Private declarations }
   public
@@ -35,70 +39,106 @@ implementation
 
 uses UntPrincipal, UntDM;
 
+var
+  TentaLogin, nivel, id_funcio_logado: integer;
+
+procedure TFrmLogin.FormActivate(Sender: TObject);
+begin
+  TentaLogin := 0;
+end;
+
+procedure TFrmLogin.spbCancelarClick(Sender: TObject);
+begin
+Application.Terminate;
+end;
 
 procedure TFrmLogin.spbOkClick(Sender: TObject);
-var mensagem, StrSql: String;
+var
+  mensagem, StrSql, niveldesc: String;
 begin
-  spbOk.Text:= 'Autenticando usuário...';
-
-  refresh;
-  spbOk.Enabled:= False;
-  EdtNome.Enabled:= False;
-  EdtSenha.Enabled:= False;
-  sleep(1000);
-
-  StrSql:= 'select u.*, p.* '+
-           'from usuario u inner join perfil p '+
-           'on u.usu_id_perfil = p.id '+
-           'where u.usu_login = ' + #39 +
-           EdtNome.Text + #39 +
-           ' and u.usu_senha = ' + #39 +
-           EdtSenha.Text + #39;
-
-  FrmMenuPrincipal.QueryLogin.Close;
-  FrmMenuPrincipal.QueryLogin.SQL.Clear;
-  FrmMenuPrincipal.QueryLogin.SQL.Add(StrSql);
-  FrmMenuPrincipal.QueryLogin.Open;
-
-  if FrmMenuPrincipal.QueryLogin.FieldByName('status').AsString = 'N' then
+  if (EdtNome.Text <> '') and (EdtSenha.Text <> '') then
   begin
-    mensagem:= 'Você está cadastrado no sistema mas não ' + #13 +
-      'possui autorização para usá-lo neste momento. ' +#13+#13+
-      'Consulte o administrador do sistema.';
+    lblStatusLogin.Font.Color:= clGray;
+    lblStatusLogin.Caption:= 'Autenticando usuário...';
 
-      Application.MessageBox(PChar(mensagem),
-      'Login não autorizado',
-      MB_OK+MB_ICONERROR);
-  end;
+    refresh;
+    spbOk.Enabled:= False;
+    EdtNome.Enabled:= False;
+    EdtSenha.Enabled:= False;
+    sleep(1000);
 
-  if (FrmMenuPrincipal.QueryLogin.RecordCount = 1) then
-  begin
-    FrmMenuPrincipal.StatusBar1.Panels[2].Text:=
-    'Usuário: ' + FrmLogin.EdtNome.Text +
-    ' - ' +
-    FrmMenuPrincipal.QueryLogin.FieldByName('USU_DEPARTAMENTO').AsString;
+    StrSql:= 'SELECT * FROM funcionario WHERE usuario = '+ #39 + EdtNome.Text + #39 +' AND senha = '+ #39 + EdtSenha.Text + #39;
 
-    FrmLogin.Close;
-  end;
+    FrmMenuPrincipal.QueryLogin.Close;
+    FrmMenuPrincipal.QueryLogin.SQL.Clear;
+    FrmMenuPrincipal.QueryLogin.SQL.Add(StrSql);
+    FrmMenuPrincipal.QueryLogin.Open;
 
-  if (FrmMenuPrincipal.QueryLogin.RecordCount = 0) then
-  begin
-    mensagem:= 'Nome ou senha do usuário são inválidos.' +#13+#13+
-    'Se você esqueceu a sua senha, consulte ' +#13+
-    'o administrador do sistema.';
+    if FrmMenuPrincipal.QueryLogin.FieldByName('status').AsString = 'N' then
+    begin
+      mensagem:= 'Você está cadastrado no sistema mas não ' + #13 +
+        'possui autorização para usá-lo neste momento. ' +#13+#13+
+        'Consulte o administrador do sistema.';
 
-      Application.MessageBox(PChar(mensagem),
-      'Login não autorizado',
-      MB_OK+MB_ICONERROR);
+        Application.MessageBox(PChar(mensagem), 'Login não autorizado', MB_OK+MB_ICONERROR);
+    end;
 
-      spbOk.Enabled:= True;
-      EdtNome.Enabled:= True;
-      EdtSenha.Enabled:= True;
-      EdtNome.Clear;
-      EdtSenha.Clear;
+    if (FrmMenuPrincipal.QueryLogin.RecordCount = 1) then
+    begin
+      // Gravando o Id do Funcionario para usar em outras telas
+      id_funcio_logado := FrmMenuPrincipal.QueryLogin.FieldByName('id').AsInteger;
+
+      // Preendo o StatusBar do MenuPrincipal
+      FrmMenuPrincipal.StatusBar1.Panels[2].Text := 'Usuário: '+ FrmMenuPrincipal.QueryLogin.FieldByName('id').AsString +' - '+ FrmLogin.EdtNome.Text;
+
+      nivel := FrmMenuPrincipal.QueryLogin.FieldByName('fk_id_nivel').AsInteger;
+      StrSql := 'SELECT nivel_descricao FROM nivel WHERE id_nivel = '+IntToStr(nivel);
+      FrmMenuPrincipal.QueryLogin.Close;
+      FrmMenuPrincipal.QueryLogin.SQL.Clear;
+      FrmMenuPrincipal.QueryLogin.SQL.Add(StrSql);
+      FrmMenuPrincipal.QueryLogin.Open;
+      niveldesc := FrmMenuPrincipal.QueryLogin.FieldByName('nivel_descricao').AsString;
+      FrmMenuPrincipal.StatusBar1.Panels[3].Text := 'Nível: '+ niveldesc;
+
+      FrmLogin.Close;
+    end
+    else
+    begin
+      if TentaLogin = 0 then
+      begin
+        mensagem:= 'Login ou senha são inválidos. Tente novamente!';
+      end;
+
+      if TentaLogin >= 1 then
+      begin
+        mensagem:= 'Login ou senha são inválidos. Se você esqueceu a sua senha, consulte o administrador do sistema.';
+      end;
+
+      TentaLogin := TentaLogin +1;
+
+      lblStatusLogin.Font.Color:= clRed;
+      lblStatusLogin.Caption := mensagem;
+      refresh;
+      spbOk.Enabled:= true;
+      EdtNome.Enabled:= true;
+      EdtSenha.Enabled:= true;
       EdtNome.SetFocus;
-      showmessage := 'Login não autorizado... '+
-      'Tente novamente';
+    end;
+  end
+  else
+  begin
+    if EdtNome.Text = '' then
+    begin
+      EdtNome.SetFocus;
+      mensagem := 'Digite o login da sua conta do SisTicket.';
+    end
+    else if EdtSenha.Text = '' then
+    begin
+      EdtSenha.SetFocus;
+      mensagem := 'Digite a senha da sua conta do SisTicket.';
+    end;
+    lblStatusLogin.Font.Color:= clRed;
+    lblStatusLogin.Caption := mensagem;
   end;
 end;
 

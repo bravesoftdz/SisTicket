@@ -4,11 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-EditorSecs=8290
-DesignerSecs=10744
-InspectorSecs=8038
-CompileSecs=438268
-OtherSecs=8994
+EditorSecs=9083
+DesignerSecs=11236
+InspectorSecs=8442
+CompileSecs=540738
+OtherSecs=9558
 =======
 EditorSecs=6480
 DesignerSecs=10153
@@ -56,7 +56,7 @@ OtherSecs=5476
 StartTime=15/04/2017 13:58:32
 RealKeys=0
 EffectiveKeys=0
-DebugSecs=2682
+DebugSecs=2810
 =======
 <<<<<<< HEAD
 EditorSecs=1027
