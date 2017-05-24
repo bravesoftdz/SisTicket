@@ -62,6 +62,7 @@ type
 
 var
   FrmListaChamados: TFrmListaChamados;
+  id_chamado: Integer;
 
 implementation
 
@@ -92,6 +93,7 @@ begin
   FrmAtendeChamado.Separador2.Visible := false;
   FrmAtendeChamado.btn_Inserir.Visible := false;
 
+  id_chamado:= FDTable1id.Value;
   FrmAtendeChamado.ShowModal;
 end;
 

@@ -1733,7 +1733,8 @@ object FrmLogin: TFrmLogin
       Width = 197
       Height = 21
       PasswordChar = '*'
-      TabOrder = 0
+      TabOrder = 1
+      OnKeyPress = EdtSenhaKeyPress
     end
     object EdtNome: TEdit
       Left = 220
@@ -1741,7 +1742,8 @@ object FrmLogin: TFrmLogin
       Width = 197
       Height = 21
       CharCase = ecLowerCase
-      TabOrder = 1
+      TabOrder = 0
+      OnKeyPress = EdtNomeKeyPress
     end
   end
 end

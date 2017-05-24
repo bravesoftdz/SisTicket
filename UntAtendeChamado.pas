@@ -54,15 +54,18 @@ type
     TabSheet1: TTabSheet;
     Histórico: TTabSheet;
     Label12: TLabel;
-    DBEdit6: TDBEdit;
     FDTblTipoMotivoid: TFDAutoIncField;
     FDTblTipoMotivodescricao: TStringField;
     FDQryHistorico: TFDQuery;
     DSHistorico: TDataSource;
     Label13: TLabel;
     Memo1: TMemo;
+    Label14: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -88,6 +91,34 @@ begin
   FDTblStatus.Open();
 end;
 
+procedure TFrmAtendeChamado.FormCreate(Sender: TObject);
+begin
+  inherited;
+  label14.Caption := DateToStr(Date);
+end;
+
+procedure TFrmAtendeChamado.FormShow(Sender: TObject);
+var
+  StrSql: String;
+begin
+  inherited;
+  StrSql:= 'SELECT * FROM historico WHERE id_chamado = '+IntToStr(id_chamado);
+
+  FDQryHistorico.Close;
+  FDQryHistorico.SQL.Clear;
+  FDQryHistorico.SQL.Add(StrSql);
+  FDQryHistorico.Open;
+end;
+
+procedure TFrmAtendeChamado.SpeedButton3Click(Sender: TObject);
+begin
+  inherited;
+  Label13.Font.Color := clBlack;
+  Label13.Caption := '';
+  Memo1.Clear;
+  Memo1.SetFocus;
+end;
+
 procedure TFrmAtendeChamado.SpeedButton4Click(Sender: TObject);
 var
   StrSql: String;
@@ -96,21 +127,21 @@ begin
   inherited;
   if Memo1.Text = '' then
   begin
-    Label3.Font.Color := clRed;
-    Label3.Caption := 'Digite a descrição do histórico.';
+    Label13.Font.Color := clRed;
+    Label13.Caption := 'Digite a descrição do histórico.';
     Memo1.SetFocus;
 
   end
   else
   begin
-  //Não terminado
-  {logado := FrmLogin.i
-    StrSql:= 'INSERT INTO historico (data, descricao, id_chamado, id_funcionario) VALUES (NOW(), '+#39+Memo1.Text+#39+', 1, '+id_funcio_logado+' )';
+    StrSql:= 'INSERT INTO historico (data, descricao, id_chamado, id_funcionario) VALUES ('+#39+DateToStr(Date)+#39+', '+#39+Memo1.Text+#39+', '+IntToStr(id_chamado)+', '+IntToStr(id_funcio_logado)+' )';
 
     FDQryHistorico.Close;
     FDQryHistorico.SQL.Clear;
     FDQryHistorico.SQL.Add(StrSql);
-    FDQryHistorico.Open;   }
+    FDQryHistorico.ExecSQL;
+    MessageDlg('Foi inserido o seu histórico.',mtInformation,[mbOK],0);
+    Memo1.Clear;
   end;
 
 

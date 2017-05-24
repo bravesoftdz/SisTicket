@@ -6,9 +6,10 @@
   Caption = 'Sistema de chamados de T.I - Atender chamado'
   ClientHeight = 620
   ClientWidth = 748
-  Position = poDesigned
   OnActivate = FormActivate
-  ExplicitTop = -196
+  OnCreate = FormCreate
+  OnShow = FormShow
+  ExplicitTop = -92
   ExplicitWidth = 754
   ExplicitHeight = 649
   PixelsPerInch = 96
@@ -297,6 +298,7 @@
       object Histórico: TTabSheet
         Caption = 'Hist'#243'rico'
         ImageIndex = 1
+        ExplicitLeft = -12
         object Label10: TLabel
           Left = 36
           Top = 16
@@ -310,6 +312,7 @@
           Width = 61
           Height = 22
           Caption = 'Limpar'
+          OnClick = SpeedButton3Click
         end
         object SpeedButton4: TSpeedButton
           Left = 465
@@ -320,8 +323,8 @@
           OnClick = SpeedButton4Click
         end
         object Label12: TLabel
-          Left = 345
-          Top = 9
+          Left = 326
+          Top = 8
           Width = 81
           Height = 13
           Caption = 'Data de Inclus'#227'o'
@@ -329,7 +332,13 @@
         object Label13: TLabel
           Left = 384
           Top = 136
-          Width = 217
+          Width = 185
+          Height = 13
+        end
+        object Label14: TLabel
+          Left = 413
+          Top = 8
+          Width = 137
           Height = 13
         end
         object DBGrid2: TDBGrid
@@ -338,6 +347,7 @@
           Width = 632
           Height = 195
           Align = alBottom
+          DataSource = DSHistorico
           ReadOnly = True
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
@@ -348,39 +358,32 @@
           Columns = <
             item
               Expanded = False
+              FieldName = 'id_funcionario'
               Title.Caption = 'Funcion'#225'rio'
               Width = 218
               Visible = True
             end
             item
               Expanded = False
+              FieldName = 'descricao'
               Title.Caption = 'Descri'#231#227'o'
               Width = 300
               Visible = True
             end
             item
               Expanded = False
+              FieldName = 'data'
               Title.Caption = 'Data'
               Width = 80
               Visible = True
             end>
-        end
-        object DBEdit6: TDBEdit
-          Left = 432
-          Top = 6
-          Width = 137
-          Height = 21
-          DataField = 'data'
-          TabOrder = 1
         end
         object Memo1: TMemo
           Left = 36
           Top = 35
           Width = 522
           Height = 70
-          Lines.Strings = (
-            'Memo1')
-          TabOrder = 2
+          TabOrder = 1
         end
       end
     end
@@ -406,7 +409,7 @@
     Left = 656
     Top = 352
     Bitmap = {
-      494C01010D001800500018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800540018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1605,7 +1608,7 @@
     Left = 656
     Top = 416
     Bitmap = {
-      494C01010D001800500018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800540018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2804,7 +2807,7 @@
     Left = 648
     Top = 465
     Bitmap = {
-      494C01010D001800500018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800540018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B
@@ -4087,6 +4090,8 @@
   end
   object FDQryHistorico: TFDQuery
     Connection = DM.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM historico')
     Left = 483
     Top = 506
   end

@@ -5,7 +5,10 @@
     <Transaction>2017/05/10 21:45:12.000.426,E:\SisTicket\SisTicket\Unit1.pas=E:\SisTicket\SisTicket\UntRelatorioPadrao.pas</Transaction>
     <Transaction>2017/05/10 21:45:12.000.426,E:\SisTicket\SisTicket\Unit1.dfm=E:\SisTicket\SisTicket\UntRelatorioPadrao.dfm</Transaction>
     <Transaction>2017/05/10 21:51:01.000.179,=E:\SisTicket\SisTicket\Unit1.pas</Transaction>
-    <Transaction>2017/05/10 21:51:51.000.964,E:\SisTicket\SisTicket\Unit1.pas=E:\SisTicket\SisTicket\UntRelatorioFuncionario.pas</Transaction>
     <Transaction>2017/05/10 21:51:51.000.964,E:\SisTicket\SisTicket\Unit1.dfm=E:\SisTicket\SisTicket\UntRelatorioFuncionario.dfm</Transaction>
+    <Transaction>2017/05/10 21:51:51.000.964,E:\SisTicket\SisTicket\Unit1.pas=E:\SisTicket\SisTicket\UntRelatorioFuncionario.pas</Transaction>
+    <Transaction>2017/05/21 17:03:15.000.424,=E:\sisticket\Unit2.pas</Transaction>
+    <Transaction>2017/05/21 17:04:27.000.467,E:\sisticket\Unit2.pas=E:\sisticket\UntCadPerfil.pas</Transaction>
+    <Transaction>2017/05/21 17:04:27.000.467,E:\sisticket\Unit2.dfm=E:\sisticket\UntCadPerfil.dfm</Transaction>
   </Transactions>
 </BorlandProject>

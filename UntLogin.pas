@@ -22,6 +22,8 @@ type
     procedure spbCancelarClick(Sender: TObject);
     procedure spbOkClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure EdtNomeKeyPress(Sender: TObject; var Key: Char);
+    procedure EdtSenhaKeyPress(Sender: TObject; var Key: Char);
     {procedure EdtNomeChange(Sender: TObject);
     procedure spbOkClick(Sender: TObject);  }
   private
@@ -32,6 +34,7 @@ type
 
 var
   FrmLogin: TFrmLogin;
+  id_funcio_logado: Integer;
 
 implementation
 
@@ -40,7 +43,23 @@ implementation
 uses UntPrincipal, UntDM;
 
 var
-  TentaLogin, nivel, id_funcio_logado: integer;
+  TentaLogin, nivel : Integer;
+
+procedure TFrmLogin.EdtNomeKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key = #13 then
+  begin
+    EdtSenha.SetFocus;
+  end;
+end;
+
+procedure TFrmLogin.EdtSenhaKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key = #13 then
+  begin
+    spbOk.Click;
+  end;
+end;
 
 procedure TFrmLogin.FormActivate(Sender: TObject);
 begin
