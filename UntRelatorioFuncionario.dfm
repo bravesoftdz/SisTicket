@@ -6,7 +6,62 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
   ExplicitHeight = 501
   PixelsPerInch = 96
   TextHeight = 13
-  object RadioGroup1: TRadioGroup [0]
+  object EdtNomeAte: TLabeledEdit [0]
+    Left = 104
+    Top = 160
+    Width = 377
+    Height = 21
+    EditLabel.Width = 50
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome at'#233':'
+    LabelPosition = lpLeft
+    TabOrder = 7
+  end
+  object EdtDepto: TLabeledEdit [1]
+    Left = 102
+    Top = 194
+    Width = 147
+    Height = 21
+    EditLabel.Width = 69
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Departamento'
+    LabelPosition = lpLeft
+    TabOrder = 8
+  end
+  object EdtCodigoDe: TLabeledEdit [2]
+    Left = 104
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 52
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo de:'
+    LabelPosition = lpLeft
+    TabOrder = 4
+  end
+  object EdtCodigoAte: TLabeledEdit [3]
+    Left = 336
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 56
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo ate:'
+    LabelPosition = lpLeft
+    TabOrder = 5
+  end
+  object EdtNomeDe: TLabeledEdit [4]
+    Left = 104
+    Top = 120
+    Width = 377
+    Height = 21
+    EditLabel.Width = 46
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome de:'
+    LabelPosition = lpLeft
+    TabOrder = 6
+  end
+  object RadioGroup1: TRadioGroup [5]
     Left = 104
     Top = 221
     Width = 377
@@ -18,61 +73,6 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
       'Nome'
       'Departamento')
     TabOrder = 9
-  end
-  object EdtNomeDe: TLabeledEdit [1]
-    Left = 104
-    Top = 120
-    Width = 377
-    Height = 21
-    EditLabel.Width = 46
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Nome de:'
-    LabelPosition = lpLeft
-    TabOrder = 6
-  end
-  object EdtCodigoAte: TLabeledEdit [2]
-    Left = 336
-    Top = 72
-    Width = 145
-    Height = 21
-    EditLabel.Width = 56
-    EditLabel.Height = 13
-    EditLabel.Caption = 'C'#243'digo ate:'
-    LabelPosition = lpLeft
-    TabOrder = 5
-  end
-  object EdtCodigoDe: TLabeledEdit [3]
-    Left = 104
-    Top = 72
-    Width = 145
-    Height = 21
-    EditLabel.Width = 52
-    EditLabel.Height = 13
-    EditLabel.Caption = 'C'#243'digo de:'
-    LabelPosition = lpLeft
-    TabOrder = 4
-  end
-  object EdtDepto: TLabeledEdit [4]
-    Left = 102
-    Top = 194
-    Width = 147
-    Height = 21
-    EditLabel.Width = 69
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Departamento'
-    LabelPosition = lpLeft
-    TabOrder = 8
-  end
-  object EdtNomeAte: TLabeledEdit [5]
-    Left = 104
-    Top = 160
-    Width = 377
-    Height = 21
-    EditLabel.Width = 50
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Nome at'#233':'
-    LabelPosition = lpLeft
-    TabOrder = 7
   end
   inherited Panel1: TPanel
     Width = 513

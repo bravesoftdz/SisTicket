@@ -29,6 +29,7 @@ type
     QueryLogin: TFDQuery;
     Clientes: TAction;
     Chamados: TAction;
+    Action3: TAction;
     procedure Action1Execute(Sender: TObject);
     procedure cad_FuncionarioExecute(Sender: TObject);
     procedure cad_ChamadoExecute(Sender: TObject);
