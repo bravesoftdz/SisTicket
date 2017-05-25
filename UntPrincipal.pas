@@ -25,8 +25,10 @@ type
     Timer1: TTimer;
     Action2: TAction;
     Panel1: TPanel;
-    Chamados: TAction;
+    Relatórios: TAction;
     QueryLogin: TFDQuery;
+    Clientes: TAction;
+    Chamados: TAction;
     procedure Action1Execute(Sender: TObject);
     procedure cad_FuncionarioExecute(Sender: TObject);
     procedure cad_ChamadoExecute(Sender: TObject);
@@ -35,7 +37,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Timer1Timer(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
-    procedure ChamadosExecute(Sender: TObject);
+    procedure RelatóriosExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,7 +55,7 @@ implementation
 
 uses UntPadrao1, UntFuncionarios, UntChamado, UntListaChamados, UntDM, UntLogin;
 
-procedure TFrmMenuPrincipal.ChamadosExecute(Sender: TObject);
+procedure TFrmMenuPrincipal.RelatóriosExecute(Sender: TObject);
 begin
   FrmListaChamados.ShowModal;
 end;
