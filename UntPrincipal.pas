@@ -106,8 +106,8 @@ procedure TFrmMenuPrincipal.FormActivate(Sender: TObject);
 var i:dword;
 begin
   conexao := false;
-  WindowState:= wsMaximized;
   StatusBar1.Panels[1].Text:= FormatDateTime('dddd ", " dd " de " mmmm " de "yyyy', Now);
+
   if InternetGetConnectedState(@i,0) then
    begin
     StatusBar1.Panels[4].Text:= 'Conectado!';
@@ -116,7 +116,8 @@ begin
    else
      StatusBar1.Panels[4].Text:= 'Não Conectado, verifique sua conexão!';
 
-  FrmLogin.ShowModal;
+  FrmLogin.Showmodal;
+  FrmLogin.Refresh;
 end;
 
 

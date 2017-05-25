@@ -13,7 +13,7 @@ uses
 
 type
   TFrmFuncionarios = class(TFrmPadrao1)
-    DBEdit1: TDBEdit;
+    EdtNome: TDBEdit;
     Label2: TLabel;
     Label3: TLabel;
     Email: TLabel;
@@ -21,19 +21,37 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit6: TDBEdit;
+    EdtNasc: TDBEdit;
+    EdtEmail: TDBEdit;
+    EdtTel: TDBEdit;
+    EdtRamal: TDBEdit;
+    EdtCelular: TDBEdit;
     DBLookupComboBox1: TDBLookupComboBox;
     FDQryDepto: TFDQuery;
     DSDepto: TDataSource;
     Label4: TLabel;
     Label5: TLabel;
-    DBEdit7: TDBEdit;
-    DBEdit8: TDBEdit;
+    EdtDataAlt: TDBEdit;
+    EdtDataInc: TDBEdit;
+    SpeedButton1: TSpeedButton;
+    Panel1: TPanel;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    Label10: TLabel;
+    Label9: TLabel;
+    Label11: TLabel;
+    ImgOk: TImage;
+    ImgErro: TImage;
+    Label13: TLabel;
+    EdtSenha: TDBEdit;
+    EdtUser: TDBEdit;
+    EdtSenhaConfirma: TEdit;
+    DBRadioGroup1: TDBRadioGroup;
+    Label12: TLabel;
+    EdtCargo: TDBEdit;
     FDTabelaid: TFDAutoIncField;
+    FDTabeladata_inc: TDateField;
+    FDTabeladata_alt: TDateField;
     FDTabelanome: TStringField;
     FDTabeladata_nasc: TStringField;
     FDTabelaemail: TStringField;
@@ -42,33 +60,26 @@ type
     FDTabelaramal: TStringField;
     FDTabelaid_departamento: TIntegerField;
     FDTabelastatus: TStringField;
-    FDTabeladata_inc: TDateField;
-    FDTabeladata_alt: TDateField;
-    SpeedButton1: TSpeedButton;
-    Panel1: TPanel;
-    GroupBox1: TGroupBox;
-    GroupBox2: TGroupBox;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    DBEdit9: TDBEdit;
-    DBEdit10: TDBEdit;
-    EdtSenhaConfirma: TEdit;
     FDTabelacargo: TStringField;
     FDTabelausuario: TStringField;
     FDTabelasenha: TStringField;
     FDTabelafk_id_nivel: TIntegerField;
-    DBEdit11: TDBEdit;
-    Label12: TLabel;
-    ImgOk: TImage;
-    ImgErro: TImage;
-    DBRadioGroup1: TDBRadioGroup;
-    Label13: TLabel;
+    SpeedButton2: TSpeedButton;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure EdtSenhaConfirmaExit(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
     procedure EdtSenhaConfirmaEnter(Sender: TObject);
+    procedure btn_EditarClick(Sender: TObject);
+    procedure btn_InserirClick(Sender: TObject);
+    procedure EdtSenhaExit(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,65 +89,110 @@ type
 var
   FrmFuncionarios: TFrmFuncionarios;
 
+
 implementation
 
 {$R *.dfm}
 
-uses UntDM, UntDepartamento;
+uses UntDM, UntDepartamento, UntLogin;
 
 
 
 
+
+procedure TFrmFuncionarios.btn_EditarClick(Sender: TObject);
+  begin
+    inherited;
+    GroupBox1.Enabled := true;
+    GroupBox2.Enabled := true;
+  end;
+
+procedure TFrmFuncionarios.btn_InserirClick(Sender: TObject);
+  begin
+    inherited;
+    GroupBox1.Enabled := true;
+    GroupBox2.Enabled := true;
+    EdtNome.SetFocus;
+    EdtSenhaConfirma.Clear;
+  end;
 
 procedure TFrmFuncionarios.btn_salvarClick(Sender: TObject);
-begin
-    if (DBEdit9.Text='') or (DBEdit10.Text = '') or (DBEdit1.Text = '') or (DBEdit2.Text = '') or (DBEdit3.Text = '')
-    and (DBEdit4.Text = '') or (DBEdit11.Text = '') then
-    showmessage ('Verifique as informações!')
-    else
-  inherited;
-
-end;
+  begin
+      if (EdtNome.Text <> '') AND (EdtNasc.Text <> '') AND (EdtEmail.Text <> '') AND (EdtUser.Text <> '') AND (EdtCargo.Text <> '')
+      AND (EdtTel.Text <> '') AND (EdtSenha.Text <> '') then
+      inherited
+      else
+         begin
+          showmessage ('Verifique as informações obrigatórias!')
+         end;
+      GroupBox1.Enabled := true;
+      GroupBox2.Enabled := true;
+  end;
 
 procedure TFrmFuncionarios.EdtSenhaConfirmaEnter(Sender: TObject);
-begin
-  inherited;
-          ImgOk.Visible := False;
-          ImgErro.Visible := False;
-          label13.Visible := False;
-end;
+  begin
+            ImgOk.Visible := False;
+            ImgErro.Visible := False;
+            label13.Visible := False;
+  end;
 
 procedure TFrmFuncionarios.EdtSenhaConfirmaExit(Sender: TObject);
+  begin
+        if (EdtSenhaConfirma.Text = EdtSenha.Text) then
+          begin
+            ImgOk.Visible := True;
+            ImgErro.Visible := False;
+            label13.Visible := False;
+          end
+        else
+          begin
+            ImgErro.Visible := True;
+            ImgOk.Visible := False;
+            label13.Visible := True;
+          end;
+          refresh;
+  end;
+
+
+procedure TFrmFuncionarios.EdtSenhaExit(Sender: TObject);
 begin
   inherited;
-      if (EdtSenhaConfirma.Text = DBEdit10.Text) then
-        begin
-          ImgOk.Visible := True;
-          ImgErro.Visible := False;
-          label13.Visible := False;
-        end
-      else
-        begin
-          ImgErro.Visible := True;
-          ImgOk.Visible := False;
-          label13.Visible := True;
-        end;
+  begin
+        if (EdtSenhaConfirma.Text = EdtSenha.Text) then
+          begin
+            ImgOk.Visible := True;
+            ImgErro.Visible := False;
+            label13.Visible := False;
+          end
+        else
+          begin
+            ImgErro.Visible := True;
+            ImgOk.Visible := False;
+            label13.Visible := True;
+          end;
+          refresh;
+  end;
 end;
 
+
 procedure TFrmFuncionarios.FormActivate(Sender: TObject);
-begin
-  inherited;
-  FDTabela.Close;
-  FDTabela.Open();
-  FDQryDepto.Close;
-  FDQryDepto.Open();
-end;
+  begin
+    inherited;
+    FDTabela.Close;
+    FDTabela.Open();
+    FDQryDepto.Close;
+    FDQryDepto.Open();
+    EdtSenhaConfirma.Text := EdtSenha.Text;
+  end;
 
 
 procedure TFrmFuncionarios.SpeedButton1Click(Sender: TObject);
-begin
-  inherited;
-  FrmDepartamento.ShowModal;
-end;
+  begin
+    inherited;
+    if (nivel = 1) then
+      FrmDepartamento.ShowModal
+      else
+      showmessage ('Usuário não tem permissão de Incluir departamento, Consulte um Administrador')
+  end;
 
 end.

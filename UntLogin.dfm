@@ -1,11 +1,12 @@
 object FrmLogin: TFrmLogin
   Left = 0
   Top = 0
+  ActiveControl = EdtNome
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'SisTicket - Gerenciador de Chamados de TI - 1.0'
-  ClientHeight = 508
-  ClientWidth = 649
+  ClientHeight = 503
+  ClientWidth = 654
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,6 +16,7 @@ object FrmLogin: TFrmLogin
   OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -1566,10 +1568,10 @@ object FrmLogin: TFrmLogin
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 649
+    Width = 654
     Height = 65
     Align = alTop
-    Caption = 'SisTicket - Login'
+    Caption = 'SisTicket - Login de usu'#225'rio'
     Color = clSkyBlue
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
@@ -1583,8 +1585,8 @@ object FrmLogin: TFrmLogin
   end
   object Panel2: TPanel
     Left = 0
-    Top = 328
-    Width = 649
+    Top = 323
+    Width = 654
     Height = 180
     Align = alBottom
     BevelEdges = []
@@ -1594,7 +1596,7 @@ object FrmLogin: TFrmLogin
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
-      Left = 150
+      Left = 166
       Top = 30
       Width = 34
       Height = 13
@@ -1607,7 +1609,7 @@ object FrmLogin: TFrmLogin
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 150
+      Left = 166
       Top = 70
       Width = 36
       Height = 13
@@ -1620,7 +1622,7 @@ object FrmLogin: TFrmLogin
       ParentFont = False
     end
     object spbOk: TSpeedButton
-      Left = 172
+      Left = 236
       Top = 113
       Width = 101
       Height = 25
@@ -1665,9 +1667,9 @@ object FrmLogin: TFrmLogin
       OnClick = spbOkClick
     end
     object spbCancelar: TSpeedButton
-      Left = 328
+      Left = 360
       Top = 113
-      Width = 89
+      Width = 97
       Height = 25
       Caption = '&Cancelar'
       Font.Charset = DEFAULT_CHARSET
@@ -1715,10 +1717,11 @@ object FrmLogin: TFrmLogin
       OnClick = spbCancelarClick
     end
     object lblStatusLogin: TLabel
-      Left = 120
-      Top = 146
-      Width = 513
+      Left = 8
+      Top = 144
+      Width = 639
       Height = 19
+      Alignment = taCenter
       AutoSize = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1726,20 +1729,21 @@ object FrmLogin: TFrmLogin
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      Layout = tlCenter
     end
     object EdtSenha: TEdit
-      Left = 220
+      Left = 236
       Top = 67
-      Width = 197
+      Width = 221
       Height = 21
       PasswordChar = '*'
       TabOrder = 1
       OnKeyPress = EdtSenhaKeyPress
     end
     object EdtNome: TEdit
-      Left = 220
+      Left = 236
       Top = 27
-      Width = 197
+      Width = 221
       Height = 21
       CharCase = ecLowerCase
       TabOrder = 0

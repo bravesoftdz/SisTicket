@@ -39,7 +39,6 @@ begin
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmRelatorioPadrao, FrmRelatorioPadrao);
   Application.CreateForm(TFrmCadPerfil, FrmCadPerfil);
-  //Application.CreateForm(TFrmRelatorioFuncionario, FrmRelatorioFuncionario);
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.Run;
 end.

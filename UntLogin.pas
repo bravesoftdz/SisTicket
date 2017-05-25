@@ -24,6 +24,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure EdtNomeKeyPress(Sender: TObject; var Key: Char);
     procedure EdtSenhaKeyPress(Sender: TObject; var Key: Char);
+    procedure FormShow(Sender: TObject);
     {procedure EdtNomeChange(Sender: TObject);
     procedure spbOkClick(Sender: TObject);  }
   private
@@ -34,7 +35,7 @@ type
 
 var
   FrmLogin: TFrmLogin;
-  id_funcio_logado: Integer;
+  id_funcio_logado, nivel: Integer;
 
 implementation
 
@@ -43,7 +44,7 @@ implementation
 uses UntPrincipal, UntDM;
 
 var
-  TentaLogin, nivel : Integer;
+  TentaLogin: Integer;
 
 procedure TFrmLogin.EdtNomeKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -52,6 +53,8 @@ begin
     EdtSenha.SetFocus;
   end;
 end;
+
+
 
 procedure TFrmLogin.EdtSenhaKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -64,6 +67,12 @@ end;
 procedure TFrmLogin.FormActivate(Sender: TObject);
 begin
   TentaLogin := 0;
+
+end;
+
+procedure TFrmLogin.FormShow(Sender: TObject);
+begin
+  EdtNome.SetFocus;
 end;
 
 procedure TFrmLogin.spbCancelarClick(Sender: TObject);
@@ -84,7 +93,7 @@ begin
     spbOk.Enabled:= False;
     EdtNome.Enabled:= False;
     EdtSenha.Enabled:= False;
-    sleep(1000);
+    sleep(500);
 
     StrSql:= 'SELECT * FROM funcionario WHERE usuario = '+ #39 + EdtNome.Text + #39 +' AND senha = '+ #39 + EdtSenha.Text + #39;
 
@@ -102,48 +111,48 @@ begin
         Application.MessageBox(PChar(mensagem), 'Login não autorizado', MB_OK+MB_ICONERROR);
     end;
 
-    if (FrmMenuPrincipal.QueryLogin.RecordCount = 1) then
-    begin
-      // Gravando o Id do Funcionario para usar em outras telas
-      id_funcio_logado := FrmMenuPrincipal.QueryLogin.FieldByName('id').AsInteger;
+      if (FrmMenuPrincipal.QueryLogin.RecordCount = 1) then
+        begin
+          // Gravando o Id do Funcionario para usar em outras telas
+          id_funcio_logado := FrmMenuPrincipal.QueryLogin.FieldByName('id').AsInteger;
 
-      // Preendo o StatusBar do MenuPrincipal
-      FrmMenuPrincipal.StatusBar1.Panels[2].Text := 'Usuário: '+ FrmMenuPrincipal.QueryLogin.FieldByName('id').AsString +' - '+ FrmLogin.EdtNome.Text;
+          // Preendo o StatusBar do MenuPrincipal
+          FrmMenuPrincipal.StatusBar1.Panels[2].Text := 'Usuário: '+ FrmMenuPrincipal.QueryLogin.FieldByName('id').AsString +' - '+ FrmLogin.EdtNome.Text;
 
-      nivel := FrmMenuPrincipal.QueryLogin.FieldByName('fk_id_nivel').AsInteger;
-      StrSql := 'SELECT nivel_descricao FROM nivel WHERE id_nivel = '+IntToStr(nivel);
-      FrmMenuPrincipal.QueryLogin.Close;
-      FrmMenuPrincipal.QueryLogin.SQL.Clear;
-      FrmMenuPrincipal.QueryLogin.SQL.Add(StrSql);
-      FrmMenuPrincipal.QueryLogin.Open;
-      niveldesc := FrmMenuPrincipal.QueryLogin.FieldByName('nivel_descricao').AsString;
-      FrmMenuPrincipal.StatusBar1.Panels[3].Text := 'Nível: '+ niveldesc;
+          nivel := FrmMenuPrincipal.QueryLogin.FieldByName('fk_id_nivel').AsInteger;
+          StrSql := 'SELECT nivel_descricao FROM nivel WHERE id_nivel = '+IntToStr(nivel);
+          FrmMenuPrincipal.QueryLogin.Close;
+          FrmMenuPrincipal.QueryLogin.SQL.Clear;
+          FrmMenuPrincipal.QueryLogin.SQL.Add(StrSql);
+          FrmMenuPrincipal.QueryLogin.Open;
+          niveldesc := FrmMenuPrincipal.QueryLogin.FieldByName('nivel_descricao').AsString;
+          FrmMenuPrincipal.StatusBar1.Panels[3].Text := 'Nível: '+ niveldesc;
+          FrmLogin.Close;
 
-      FrmLogin.Close;
+        end
+      else
+        begin
+          if TentaLogin = 0 then
+          begin
+            mensagem:= 'Login ou senha são inválidos. Tente novamente!';
+          end;
+
+          if TentaLogin >= 1 then
+          begin
+            mensagem:= 'Login ou senha são inválidos. Se você esqueceu a sua senha, consulte o administrador do sistema.';
+          end;
+
+          TentaLogin := TentaLogin +1;
+
+          lblStatusLogin.Font.Color:= clRed;
+          lblStatusLogin.Caption := mensagem;
+          refresh;
+          spbOk.Enabled:= true;
+          EdtNome.Enabled:= true;
+          EdtSenha.Enabled:= true;
+          EdtNome.SetFocus;
+        end;
     end
-    else
-    begin
-      if TentaLogin = 0 then
-      begin
-        mensagem:= 'Login ou senha são inválidos. Tente novamente!';
-      end;
-
-      if TentaLogin >= 1 then
-      begin
-        mensagem:= 'Login ou senha são inválidos. Se você esqueceu a sua senha, consulte o administrador do sistema.';
-      end;
-
-      TentaLogin := TentaLogin +1;
-
-      lblStatusLogin.Font.Color:= clRed;
-      lblStatusLogin.Caption := mensagem;
-      refresh;
-      spbOk.Enabled:= true;
-      EdtNome.Enabled:= true;
-      EdtSenha.Enabled:= true;
-      EdtNome.SetFocus;
-    end;
-  end
   else
   begin
     if EdtNome.Text = '' then

@@ -2,8 +2,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   Left = 0
   Top = 0
   Caption = 'SisTicket - Sistema de Chamados TI - 1.0'
-  ClientHeight = 447
-  ClientWidth = 747
+  ClientHeight = 658
+  ClientWidth = 757
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  WindowState = wsMaximized
+  Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
@@ -20,7 +20,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   object ActionMainMenuBar1: TActionMainMenuBar
     Left = 0
     Top = 139
-    Width = 747
+    Width = 757
     Height = 31
     UseSystemFont = False
     ActionManager = ActionManager1
@@ -41,7 +41,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   object ActionToolBar1: TActionToolBar
     Left = 0
     Top = 65
-    Width = 747
+    Width = 757
     Height = 74
     ActionManager = ActionManager1
     Caption = 'ActionToolBar1'
@@ -56,6 +56,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    HorzMargin = 35
+    Orientation = boTopToBottom
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
@@ -63,8 +65,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 428
-    Width = 747
+    Top = 639
+    Width = 757
     Height = 19
     Panels = <
       item
@@ -86,7 +88,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 747
+    Width = 757
     Height = 65
     Align = alTop
     BorderStyle = bsSingle
@@ -107,7 +109,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Left = 224
     Top = 272
     Bitmap = {
-      494C010105001800240140004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101050018002C0140004000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000000100008000000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

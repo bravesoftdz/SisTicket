@@ -1,27 +1,27 @@
 inherited FrmChamado: TFrmChamado
   Caption = 'Sistema de chamados de TI - Cadastrar chamado'
-  ClientHeight = 645
-  ClientWidth = 846
+  ClientHeight = 611
+  ClientWidth = 738
   OnActivate = FormActivate
-  ExplicitWidth = 852
-  ExplicitHeight = 674
+  ExplicitWidth = 744
+  ExplicitHeight = 640
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar1: TToolBar
-    Top = 65
-    Width = 846
+    Top = 73
+    Width = 738
     ExplicitTop = 65
     ExplicitWidth = 846
   end
   inherited StatusBar1: TStatusBar
-    Top = 626
-    Width = 846
+    Top = 592
+    Width = 738
     ExplicitTop = 626
     ExplicitWidth = 846
   end
   inherited PanelEntrada: TPanel
-    Top = 114
-    Width = 846
+    Top = 122
+    Width = 738
     ExplicitTop = 114
     ExplicitWidth = 846
     inherited Label1: TLabel
@@ -43,9 +43,9 @@ inherited FrmChamado: TFrmChamado
     end
   end
   inherited PnlFicha: TPanel
-    Top = 144
-    Width = 846
-    Height = 482
+    Top = 152
+    Width = 738
+    Height = 440
     ExplicitTop = 144
     ExplicitWidth = 846
     ExplicitHeight = 482
@@ -208,8 +208,8 @@ inherited FrmChamado: TFrmChamado
   object Panel1: TPanel [4]
     Left = 0
     Top = 0
-    Width = 846
-    Height = 65
+    Width = 738
+    Height = 73
     Align = alTop
     Caption = 'Cadastro de Chamados'
     Color = clSkyBlue
@@ -221,12 +221,13 @@ inherited FrmChamado: TFrmChamado
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
+    ExplicitWidth = 846
   end
   inherited ImageList1: TImageList
     Left = 8
     Top = 536
     Bitmap = {
-      494C01010D001800480018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D0018004C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1425,7 +1426,7 @@ inherited FrmChamado: TFrmChamado
     Left = 48
     Top = 536
     Bitmap = {
-      494C01010D001800480018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D0018004C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2624,7 +2625,7 @@ inherited FrmChamado: TFrmChamado
     Left = 104
     Top = 537
     Bitmap = {
-      494C01010D001800480018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D0018004C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B
@@ -3839,8 +3840,8 @@ inherited FrmChamado: TFrmChamado
     Connection = DM.FDConnection1
     SQL.Strings = (
       'SELECT id,nome FROM funcionario ORDER BY nome')
-    Left = 296
-    Top = 519
+    Left = 304
+    Top = 535
   end
   object FDQryTipo: TFDQuery
     Connection = DM.FDConnection1

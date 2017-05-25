@@ -169,7 +169,6 @@ begin
     begin
       StatusBar1.Panels[2].Text:= 'Exclusão Cancelada';
     end;
-
     Executar:= habilitaBotoes;
     Executar:= exibePanels;
 end;

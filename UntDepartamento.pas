@@ -15,6 +15,7 @@ type
   TFrmDepartamento = class(TFrmPadraoSimples)
     FDTable1id: TFDAutoIncField;
     FDTable1descricao: TStringField;
+    SpeedButton1: TSpeedButton;
     procedure btn_inserirClick(Sender: TObject);
     procedure btn_editarClick(Sender: TObject);
   private
