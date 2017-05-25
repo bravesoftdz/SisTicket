@@ -9,9 +9,8 @@
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  ExplicitTop = -92
   ExplicitWidth = 754
-  ExplicitHeight = 649
+  ExplicitHeight = 648
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar1: TToolBar
@@ -130,6 +129,10 @@
       TabOrder = 3
       object TabSheet1: TTabSheet
         Caption = 'Informa'#231#245'es Chamado'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object Label3: TLabel
           Left = 69
           Top = 24
@@ -298,7 +301,6 @@
       object Histórico: TTabSheet
         Caption = 'Hist'#243'rico'
         ImageIndex = 1
-        ExplicitLeft = -12
         object Label10: TLabel
           Left = 36
           Top = 16
@@ -332,13 +334,13 @@
         object Label13: TLabel
           Left = 384
           Top = 136
-          Width = 185
+          Width = 3
           Height = 13
         end
         object Label14: TLabel
           Left = 413
           Top = 8
-          Width = 137
+          Width = 3
           Height = 13
         end
         object DBGrid2: TDBGrid
@@ -409,7 +411,7 @@
     Left = 656
     Top = 352
     Bitmap = {
-      494C01010D001800540018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800580018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000009A66
@@ -1608,7 +1610,7 @@
     Left = 656
     Top = 416
     Bitmap = {
-      494C01010D001800540018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800580018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008080
@@ -2807,7 +2809,7 @@
     Left = 648
     Top = 465
     Bitmap = {
-      494C01010D001800540018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800580018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000006000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000824B

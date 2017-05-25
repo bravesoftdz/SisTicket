@@ -2,16 +2,11 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
   Caption = 'Sisticket - Relat'#243'rio de Funcion'#225'rios'
   ClientHeight = 473
   ClientWidth = 513
-  ExplicitTop = -70
   ExplicitWidth = 519
-  ExplicitHeight = 502
+  ExplicitHeight = 501
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Panel1: TPanel
-    Width = 513
-    ExplicitWidth = 513
-  end
-  object EdtNomeAte: TLabeledEdit [1]
+  object EdtNomeAte: TLabeledEdit [0]
     Left = 104
     Top = 160
     Width = 377
@@ -22,7 +17,51 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
     LabelPosition = lpLeft
     TabOrder = 7
   end
-  object RadioGroup1: TRadioGroup [2]
+  object EdtDepto: TLabeledEdit [1]
+    Left = 102
+    Top = 194
+    Width = 147
+    Height = 21
+    EditLabel.Width = 69
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Departamento'
+    LabelPosition = lpLeft
+    TabOrder = 8
+  end
+  object EdtCodigoDe: TLabeledEdit [2]
+    Left = 104
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 52
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo de:'
+    LabelPosition = lpLeft
+    TabOrder = 4
+  end
+  object EdtCodigoAte: TLabeledEdit [3]
+    Left = 336
+    Top = 72
+    Width = 145
+    Height = 21
+    EditLabel.Width = 56
+    EditLabel.Height = 13
+    EditLabel.Caption = 'C'#243'digo ate:'
+    LabelPosition = lpLeft
+    TabOrder = 5
+  end
+  object EdtNomeDe: TLabeledEdit [4]
+    Left = 104
+    Top = 120
+    Width = 377
+    Height = 21
+    EditLabel.Width = 46
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome de:'
+    LabelPosition = lpLeft
+    TabOrder = 6
+  end
+  object RadioGroup1: TRadioGroup [5]
     Left = 104
     Top = 221
     Width = 377
@@ -35,49 +74,9 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
       'Departamento')
     TabOrder = 9
   end
-  object EdtNomeDe: TLabeledEdit [3]
-    Left = 104
-    Top = 120
-    Width = 377
-    Height = 21
-    EditLabel.Width = 46
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Nome de:'
-    LabelPosition = lpLeft
-    TabOrder = 6
-  end
-  object EdtCodigoAte: TLabeledEdit [4]
-    Left = 336
-    Top = 72
-    Width = 145
-    Height = 21
-    EditLabel.Width = 56
-    EditLabel.Height = 13
-    EditLabel.Caption = 'C'#243'digo ate:'
-    LabelPosition = lpLeft
-    TabOrder = 5
-  end
-  object EdtCodigoDe: TLabeledEdit [5]
-    Left = 104
-    Top = 72
-    Width = 145
-    Height = 21
-    EditLabel.Width = 52
-    EditLabel.Height = 13
-    EditLabel.Caption = 'C'#243'digo de:'
-    LabelPosition = lpLeft
-    TabOrder = 4
-  end
-  object EdtDepto: TLabeledEdit [6]
-    Left = 102
-    Top = 194
-    Width = 147
-    Height = 21
-    EditLabel.Width = 69
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Departamento'
-    LabelPosition = lpLeft
-    TabOrder = 8
+  inherited Panel1: TPanel
+    Width = 513
+    ExplicitWidth = 513
   end
   inherited BitBtn1: TBitBtn
     Left = 336
@@ -112,12 +111,16 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
     Top = 368
   end
   inherited frxReport1: TfrxReport
-    ReportOptions.LastChange = 42866.002254988400000000
+    ReportOptions.LastChange = 42879.915799953700000000
     Left = 168
     Top = 368
     Datasets = <
       item
         DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+      end
+      item
+        DataSet = FrmRelatorioPadrao.frxDBDataset1
         DataSetName = 'frxDBDataset1'
       end>
     Variables = <>
@@ -245,23 +248,6 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
             '[frxDBDataset1."telefone"]')
           ParentFont = False
         end
-        object frxDBDataset1celular: TfrxMemoView
-          Left = 502.677490000000000000
-          Top = 37.795300000000000000
-          Width = 136.063080000000000000
-          Height = 18.897650000000000000
-          DataField = 'celular'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Memo.UTF8W = (
-            '[frxDBDataset1."celular"]')
-          ParentFont = False
-        end
         object Memo18: TfrxMemoView
           Left = 226.771800000000000000
           Width = 94.488250000000000000
@@ -324,9 +310,9 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
           ParentFont = False
         end
         object Memo20: TfrxMemoView
-          Left = 453.543600000000000000
+          Left = 442.205010000000000000
           Top = 60.472480000000000000
-          Width = 49.133890000000000000
+          Width = 56.692950000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -338,7 +324,7 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
           ParentFont = False
         end
         object frxDBDataset1email: TfrxMemoView
-          Left = 506.457020000000000000
+          Left = 502.677490000000000000
           Top = 60.472480000000000000
           Width = 241.889920000000000000
           Height = 18.897650000000000000
@@ -353,6 +339,17 @@ inherited FrmRelatorioFuncionario: TFrmRelatorioFuncionario
           Memo.UTF8W = (
             '[frxDBDataset1."email"]')
           ParentFont = False
+        end
+        object frxDBDataset1CELULAR: TfrxMemoView
+          Left = 506.457020000000000000
+          Top = 37.795300000000000000
+          Width = 400.630180000000000000
+          Height = 18.897650000000000000
+          DataField = 'CELULAR'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."CELULAR"]')
         end
       end
       inherited PageFooter1: TfrxPageFooter

@@ -4,11 +4,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 EditorSecs=17763
 DesignerSecs=13819
 InspectorSecs=9691
 CompileSecs=870803
 OtherSecs=11317
+=======
+EditorSecs=6836
+DesignerSecs=10248
+InspectorSecs=8049
+CompileSecs=430309
+OtherSecs=8984
+>>>>>>> 5c0416f921b61ceca2e2588c2de191e7dd1b790d
 =======
 EditorSecs=6480
 DesignerSecs=10153
@@ -56,7 +64,7 @@ OtherSecs=5476
 StartTime=15/04/2017 13:58:32
 RealKeys=0
 EffectiveKeys=0
-DebugSecs=2810
+DebugSecs=2705
 =======
 <<<<<<< HEAD
 EditorSecs=1027
